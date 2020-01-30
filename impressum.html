@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<title>Games!</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+<style>
+body, html {height: 100%}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
+.menu {display: none}
+.bgimg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("https://raw.githubusercontent.com/kalou91/kalou91.github.io/master/spiel2.jpg");
+  min-height: 90%;
+}
+</style>
+<body>
+
+<div class="w3-top w3-mobile">
+    <div class="w3-bar w3-xlarge w3-black w3-opacity w3-hover-opacity-off" id="myNavbar">
+        <a href="index.html" class="w3-bar-item w3-button" style="text-align:right">HOME</a>
+        <a href="games.html" class="w3-bar-item w3-button" style="text-align:right">GAMES</a>
+        <a href="why.html" class="w3-bar-item w3-button" style="text-align:right">WHY</a>
+        <a href="kids.html" class="w3-bar-item w3-button" style="text-align:right">ABOUT US</a>
+        <a href="index.html#contact" class="w3-bar-item w3-button" style="text-align:right">CONTACT</a>
+    </div>
+</div>  
+  
+<!-- Games Container -->
+<div class="w3-container w3-padding-64 w3-green w3-xlarge" id="about">
+    <div class="w3-content">
+        <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">IMPRESSUM</h1>
+
+        Gonzalo Villa Rosas
+        Projendorferstraße 14, 24106 Kiel
+        Luca Palmieri
+        Mühlenbrook 3, 24106 Kiel
+        spielinkiel@freenet.de
+        
+    </div>
+</div>
+  
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-48 w3-xxlarge">
+  <p style="font-size:14px"><a href="impressum.html">Impressum</a></p> | 
+  <a href="mailto:spielinkiel@freenet.de"><i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i></a>
+  <a href="https://www.facebook.com/Wandelw%C3%BCrfel-115820006634950/" class="w3-bar-item w3-button"><i class="fa fa-facebook-official"></i></a>
+  <p>Made with <img src="img/heart.png" width="50"> in Kiel! - Powered by <a href="https://fairnetz-kiel.de/" title="Fairnetz Kiel" target="_blank" class="w3-hover-text-green"><img src="img/fn_logo.png" width="100"></a></p>
+</footer>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-red";
+}
+document.getElementById("myLink").click();
+</script>
+
+</body>
+</html>

@@ -15,95 +15,379 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
   background-image: url("https://raw.githubusercontent.com/kalou91/kalou91.github.io/master/spiel2.jpg");
   min-height: 90%;
 }
+.fadeIn {
+	animation:opac 1.8s;
+	@keyframes opac{from{opacity:0} to{opacity:1}};
+}
 </style>
 <body>
 
 <!-- Navbar (sit on top) -->
-<div class="w3-top w3-mobile">
-  <div class="w3-bar w3-xlarge w3-black w3-opacity w3-hover-opacity-off" id="myNavbar">
-    <a href="index.html" class="w3-bar-item w3-button">HOME</a>
-    <a href="games.html" class="w3-bar-item w3-button">GAMES</a>
-    <a href="why.html" class="w3-bar-item w3-button">WHY</a>
-    <a href="kids.html" class="w3-bar-item w3-button">ABOUT US</a>
-    <a href="index.html#contact" class="w3-bar-item w3-button">CONTACT</a>
-  </div>
-</div>
+<div class="w3-top w3-hide-small">
+    <div class="w3-bar w3-xlarge w3-black w3-opacity w3-hover-opacity-off" id="myNavbar" >
+			<div id="leftpart-english" class="english">
+        <a href="index.html#en" class="w3-bar-item w3-button">HOME</a>
+        <a href="games.html#en" class="w3-bar-item w3-button button">GAMES</a>
+        <a href="why.html#en" class="w3-bar-item w3-button button">WHY</a>
+        <a href="kids.html#en" class="w3-bar-item w3-button button">ABOUT US</a>
+        <a href="contact.html#en" class="w3-bar-item w3-button button">CONTACT</a>
+			</div>
+			<div id="leftpart-deutsch" style="display: none" class="deutsch">
+        <a href="index.html#de" class="w3-bar-item w3-button">HOME</a>
+        <a href="games.html#de" class="w3-bar-item w3-button">SPIELE</a>
+        <a href="why.html#de" class="w3-bar-item w3-button button">WARUM</a>
+        <a href="kids.html#de" class="w3-bar-item w3-button button">WER SIND WIR</a>
+        <a href="contact.html#de" class="w3-bar-item w3-button button">KONTAKT</a>
+			</div>
+			<div class="w3-display-topright" style="padding-right: 30px;">
+				<div class="w3-button">
+        	<a href="#de" onclick="changeLanguage('deutsch');" id="languageDE" ><img src="icons/germany-flag-3d-icon-32.png"></a>
+				</div>
+				&nbsp;
+				<div class="w3-button">
+					<a href="#en" onclick="changeLanguage('english');" id="languageEN" ><img src="icons/united-kingdom-flag-3d-icon-32.png"></a>
+				</div>
+			</div>
+    </div>
+</div>	
 
 <div class="w3-container w3-green w3-padding-64 w3-xxlarge" id="explanation">
-  <div class="w3-content">
-  
-    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">Why are we doing this?</h1>
-    <small>Why are we making games? What brought us to put our effort into this project instead of just going to 
-    a normal job, get our money and live happily ever after? 
-    You can read about our motivation here, either the full explanation, or if you really cannot read more than 140 characters :( , the compact form on the right. </small>
-    <br>
-    Enjoy!
-    
-    <div class="w3-row w3-center w3-border w3-border-dark-grey w3-light-green">
-      <a href="javascript:void(0)" onclick="openMenu(event, 'FULL');" id="myLink">
-        <div class="w3-col s6 tablink w3-padding-large w3-hover-dark-grey">Full Explanation</div>
-      </a>
-      <a href="javascript:void(0)" onclick="openMenu(event, 'TLDR');">
-        <div class="w3-col s6 tablink w3-padding-large w3-hover-dark-grey">TL;DR</div>
-      </a>
-    </div>
-    <div id="FULL" class="w3-container menu w3-padding-32 w3-white"  style="font-size:20px">
-      <p> We are unhappy with how stuff are done in our society, this is clear. But exactly why and how? 
-        These are questions that we are trying to address every day, if not more often.
-        Even though we do not have a clear answer, we are starting to get to see some patterns.
-        Most of the things that we do, we do it that way, because it is <strong>easier</strong> and 
-        because <strong>we are used to do it that way </strong>. 
-        So, if (very optimistic if) we can try to do something, is to change the way people see the everyday task
-        and how they plan their projects. </p>
-      <br>  
-      <p class="w3-tag w3-round w3-blue" style="text-align:left"><strong>DISCLAIMER:</strong><br>
-        We are aware that games are just a small part of our education, and there would be many other things 
-        that we could spend our time on, instead. But everybody has their own passion, and we try to combine
-        what we like with what we should do, so we opted for this project this time. 
-        Plus gamification has shown to be an unexpectedly extremely powerful resource!
-        Add source and images!</p>
-      <br>
-      <br>
-      <p> We are working to model different behavioural model and try to find a way to bring their idea into games.
-        The task of simplifying modern complex problem into single games and still maintaining a fun and simple environment is huge,
-        but we are giving it our best shot.</p>
-      <p> The first ideas that we are trying to implement is to fuse the collaborative and individual game strategies.
-        Most of the games are either purely individual (each one plays to win) or purely collaborative (all together),
-        while we believe those two things could be combined in a more complex and entertaining framework, where our goal 
-        are still alive, yet regulated from a greater common objective</p>
-      
-      <br>
-      <p> The full explanation is still work in progress.. In order to clearly express our thoughts and ideas we are still brainstorming, 
-      come back soon for news! </p>
-      <!-- 
-    <p> So, we took a look at the top board games that are at the moment out there. What did we find? </p>
-      <p class="w3-tag w3-round w3-indigo"><img src="img/topgames.png" style="width:100%"></p>
-      <p> Among the top 10, most of the games are... </p>
-      <br>
-        -->
-    </div>
-     
-    <div id="TLDR" class="w3-container menu w3-padding-32 w3-white">
-      <p> We want to promote critical thinking and new ideas of implicit collaboration even when we are compiting.
-        We want people to play, enjoy, have fun and at the same time incorporate some of the concepts that could 
-        help us develop a more fair and sustainable world! *</p>
-      <p style="font-size:16px"> * yes, these were actually 261 characters! And by reading this, you even added 85 more! 
-        Congratulations! You are above the average reader!
-        Statistics shows, <a href="https://www.go-gulf.ae/how-people-read-content-online/">average attention span for users in Internet dropped to 8 seconds</a>,
-        and reading speed is <a href="https://www.irisreading.com/what-is-the-average-reading-speed/">on average between 200 and 250 words per minute</a>,
-        making it around 4 words per second. So in 8 seconds, the average readers read 32 words, and our statement contains even 46!
-        You are doing great!</p>
-    </div><br>
+  <div class="w3-padding">
+  	<div class="fadeIn">
+			<div class="english w3-animate-right">
+				<h1 class="w3-center w3-jumbo" style="margin-bottom:64px">Why are we doing this?</h1>
+				<small>Why are we making games? What brought us to put our effort into this project instead of just going to 
+				a normal job, get our money and live happily ever after? 
+				You can read about our motivation here, either the full explanation, or if you really cannot read more than 140 characters :( , the compact form on the right. </small>
+				<br>
+				Enjoy!
+
+				<div class="w3-row w3-center w3-border w3-border-dark-grey w3-light-green w3-round">
+					<a href="javascript:void(0)" onclick="openMenu(event, 'FULL');" id="myLink">
+						<div class="w3-col s6 tablink w3-padding-large w3-hover-dark-grey">Full Explanation</div>
+					</a>
+					<a href="javascript:void(0)" onclick="openMenu(event, 'TLDR');">
+						<div class="w3-col s6 tablink w3-padding-large w3-hover-dark-grey">In a Nutshell</div>
+					</a>
+				</div>
+
+				<div id="FULL" class="w3-container menu w3-padding-32 w3-white w3-round"  style="font-size:20px">
+					<p> We are unhappy with how stuff are done in our society, this is clear. But exactly why and how? 
+						These are questions that we are trying to address every day, if not more often.
+						Even though we do not have a clear answer, we are starting to get to see some patterns.
+						Most of the things that we do, we do it that way, because it is <strong>easier</strong> and 
+						because <strong>we are used to do it that way </strong>. 
+						So, if (very optimistic if) we can try to do something, is to change the way people see the everyday task
+						and how they plan their projects. </p>
+					<br>  
+					<p class="w3-tag w3-round w3-blue" style="text-align:left"><strong>DISCLAIMER:</strong><br>
+						We are aware that games are just a small part of our education, and there would be many other things 
+						that we could spend our time on, instead. But everybody has their own passion, and we try to combine
+						what we like with what we should do, so we opted for this project this time. 
+						Plus gamification has shown to be an unexpectedly extremely powerful resource! 
+						If you do not believe us,
+						check out the <a href="https://worldpeacegame.org/">World Peace Game</a> or its <a href="https://www.ted.com/talks/john_hunter_teaching_with_the_world_peace_game">Ted Talk</a> for inspirational motives, 
+						or check out the <a href="https://www.ted.com/talks/jane_mcgonigal_gaming_can_make_a_better_world#t-516804">Jane McGonial Talk</a> for another point of view on that! 
+						<br>
+						PS: She (Jane) has a lot of <a href="https://www.ted.com/speakers/jane_mcgonigal">videos</a> about that!
+					</p>
+					<br>
+					<p class="w3-text w3-xlarge">
+						<b>So, we took a look at the top board games that are at the moment out there. What did we find? </b>
+					</p>
+					<p class="w3-center w3-round w3-medium"><img src="img/topgames.png" style="width:60%"><br>This was at the beginning of 2020. of course it will change, but the themes will most likely remain similar</p>
+					<p> Among the top 10, most of the games are about adventures, travelling to discover new places, get stronger and win over your opponents.
+					We see games in which you create a new civilization (whether on mars, like <a href="https://boardgamegeek.com/boardgame/167791/terraforming-mars">Terraforming Mars (2016)</a> 
+						or on a fantasy world, as <a href="https://boardgamegeek.com/boardgame/182028/through-ages-new-story-civilization">Through the Ages: A New Story of Civilization (2015)</a>
+						or <a href="https://boardgamegeek.com/boardgame/220308/gaia-project">Gaia Project (2017)</a>, where you have to colonize other planets.) 
+						and your aim is always to produce more or be stronger than the others. 
+						<br>
+						The two Twilights games (<a href="https://boardgamegeek.com/boardgame/233078/twilight-imperium-fourth-edition">Twilight Imperium (2017)</a>
+						and <a href="https://boardgamegeek.com/boardgame/12333/twilight-struggle">Twilight Struggle (2005) )</a> and 
+						the <a href="https://boardgamegeek.com/boardgame/12333/twilight-struggle">Star Wars: Rebellion (2016)</a> 
+						exploits the theme of epic conflicts, with different scenarios, ranging from real world event to far away galaxies.
+						<br>
+						There are also games with very sophisticated and complex mechanisms 
+						simulating competing entrepreneurs (<a href="https://boardgamegeek.com/boardgame/224517/brass-birmingham">Brass: Birmingham (2018)</a>), 
+						simulating the rise of eastern european countries (<a href="https://boardgamegeek.com/boardgame/169786/scythe">Scythe (2016) ) that have real ambientations.</a>
+						<br>
+						One exception is the cooperative <a href="https://boardgamegeek.com/boardgame/161936/pandemic-legacy-season-1">Pandemic Legacy: Season 1 (2015)</a>, deriving from the <a href="https://boardgamegeek.com/boardgame/30549/pandemic">Pandemice (2008)</a> game, in which everybody cooperates to save the world from a spreading disease.
+						A game that probably in these times (March 2020) fits very good our actual situation, where worldwide collaboration is strongly requested.
+						<br>
+					</p>
+					<p class="w3-text w3-xlarge">
+						<b>Wait a moment, What's wrong with those games?</b>
+					</p>
+					<p class="w3-text">
+						In itselft, nothing. But we believe games can and have an impact on how we learn and think, and therefore would like to have at least a broder range of topics addressed in the games.
+					</p>
+						<p class="w3-tag w3-round w3-blue" style="text-align:left"><strong>DISCUSSION: if you like to discuss stuff, read this box. If you do not care, why are you even here? Let alone jokes, if you are informed, you can skip this</strong><br><br>
+							If games actually have an impact and which kind of impact would be a nice discussion, you can read here some articles about general ideas and platforms, as Games4Ed <a href="#games4ed">[1]</a>, Edutopia <a href="#edutopia">[2]</a>, book reviews <a href="#bookreview">[3]</a> or scientific literature on the topic <a href="#lowincome">[4]</a>. Here you can find a whole section of a journal about game and culture <a href="#gamesandculture">[5]</a>.
+							<br>
+							Since we try our best to <a href="https://waitbutwhy.com/2019/09/thinking-ladder.html">think like scientists (if you don't get what we mean here, read the article linked! Yes it's super long, yet super interesting)</a>, we need to also give an overview of the literature against our ideas. For examples, studies found that video games do not improve learning <a href="#noimprove">[6]</a>, source <a href="#studypaywall">[7]</a> or found correlation between video games and adolescent behavioural problems <a href="#teens">[8]</a>.
+							<br>
+							To finish the discussion we mention also general analysis, if you are really into the topic you can seriously read a serious <i>A Meta-Analysis of Use of Serious Games in Education over a Decade</i> <a href="#serious">[9]</a> or the relationships between game genres, learning styles and educational computer games <a href="#relation">[10]</a>.
+							<br><br>
+							Basically, the aim of this is to promote an informed discussion! Read whatever you want (and feel free to add if you want, of course the website is open-source (the full code is actually available <a href="https://github.com/spielinkiel/spielinkiel.github.io">here on Github</a> and you are welcome to propose changes!) and have fun!
+						</p>
+					<p class="w3-text">
+						Ok, back to our games. Let's imagine now we want <i>to make the world a better place</i> (if you need help for that, on wiki-how there is a easy guide on <a href="https://www.wikihow.com/Make-the-World-a-Better-Place">How to make the world a better place (with Pictures)</a> - or watch an inspiration <a href="https://www.youtube.com/watch?v=o08ykAqLOxk">Talk</a> about that), we should have a completely different variety of games in the top 10. <br>
+						Exagerating now for the purposes of explanations, the top games would look like:
+					</p>
+					<p class="w3-center w3-round w3-medium"><img src="https://en.unesco.org/sites/default/files/sdgs_poster_936_en.png" style="width:70%"><br><a href="https://www.youtube.com/watch?v=YkgkThdzX-8">Imagine</a> if the top games would correspond to the sustainable development goals..</p>
+					<p class="w3-text">
+						Now, let's think about <i>why</i> that isn't the case. We guess one of the main causes it's because it would be <i>boring</i>. Do you want to play a game in which you have to redistribute the wealth and build systems to help reduce inequality incomes? Remember, that if you are playing the game you most likely are among the people who have more wealth, so basically you should give up something you have and give it to people you have never seen and will never seen, without any guarantee they will use it in a better way, equality would just mean that they have the same possibility as you. That does not sound very funny, right? If you are already doing that, <a href="https://www.youtube.com/watch?v=5-k4ykdvQtw">hats off to you</a>, and hope that you make many children that will grow up with your ideas.<br>
+						Yet, if you are more like us - let's be honest, lazy people who would like to do something good and in the end survive by trying to get maximum results with minimum effort - we need something more fun and motivating to play with.<br>
+					</p>
+					<p class="w3-text w3-xlarge">
+						<b>So, you that knows everything, why is boring and how can me make it fun?</b>
+					</p>
+					<p class="w3-text">
+						<b>Honestly, we don't know. We make conjuctures and thoughts, that's what we like most. But do not take these as definite answers, please.</b><br>
+						That's also the point of this project - an introspective research on that. What we started to see is a pattern that can partially explain why it's very hard to enjoy and stick to solidarity purposes.<br>
+						There are 2 main points: <br>
+						- We don't get nothing out of it. For many things, we do not get (at least in the short time) any reward. Of course, some peoeple may <i>feel</i> better because they did something they consider good (we are not able to judge good, so let's stick to the idea that everybody consider good different things), but usually that's not enough. For example for climate change (or the even more actual pandemic, if you read this in 2020), the <i>winning</i> outcome is to preserve the actual situation. But since we do not know how it would be if we do not take care (nobody can know) it is very hard to make effort for something we don't know. <br>
+						- There is an underlining implicit cooperation system that favours who is actually egoistic. It may sounds harsh to say, but the single (or partial, meaning from a group, but not the totality of the people) effort in one direction may actually result in helping the rest of the people to do less about it. A very cool graphical explanation can be seen in this very cool <a href="https://www.youtube.com/watch?v=lFEgohhfxOA">video</a> where a simulated population with two genes (altruistic and egoistic, or normal) are let to live a very simplified model of live. As expected, the population with the altruistic gene tends to decrease, because they help the others, by getting nothing in return. <br>
+						Of course, this is an exagerated provocation, in real life it's not like this, but we wanted to convey the point in just a few lines - something we are terrible at, as you understood if you read until this line. Basically, to trying to visualize it with an even simpler example, if we want to solve the global warming problem by planting trees (spoiler: <span class="show" onclick="show(globalwarming)">click to see</span><span class="spoiler" id="globalwarming" style="display: none;">it won't work, but nice try, keep it up!</span>), collecting data from a 2010 study, you would need approximately 1,545,000,000,000 trees (calculations <a href="https://earthscience.stackexchange.com/questions/2639/how-many-trees-would-i-have-to-plant-to-solve-global-warming">here</a>, thanks <a href="https://earthscience.stackexchange.com/users/624/dikran-marsupial">Dikran Marsupial</a> and <a href="https://earthscience.stackexchange.com/users/6298/jeopardytempest">JeopardyTempest</a>). Now, if a very generous person plants 1,545,000,000,020 trees (20 more than needed) you could actually cut 20 trees to make a nice campfire and the global warming problem would still be solved. But if that same person would have planted 1,544,999,999,980 trees (20 less than needed), you would have to plant 20 more and you could not cut anyone for you! <br>
+						Here we don't mean that if someone else do something to help you do not have to help anymore, but you get the point. How do we motivate everybody to collaborate?
+					</p>
+					<p class="w3-text w3-xlarge">
+						<b>Still, I don't get it, when it comes the fun part?</b>
+					</p>
+					<p class="w3-text">
+						Yes, me neither. We are working on it, I promise. We are trying to take inspiration from the funniest and more entertaining games and trying to incorporate those patterns, ideas, strategies into our model of implicit collaboration. Sometimes we will make complicated games to try to simulate better the model, sometimes easier games where you can relax more. <br>
+						Since we do not know the answer or the solution to the problme either, the best we can do is to stimualte discussion. Already putting some references, some topics, some patterns into the game will help people starting to realize some <a href="https://www.dasbuntedeck.de/">contraddictions</a>, starting to discuss them and maybe finding the solution and help us!
+					</p>
+					<p class="w3-center w3-round w3-medium"><img src="https://cdn.pixabay.com/photo/2020/03/19/08/48/animal-world-4946785_960_720.jpg" style="width:70%"><br>Thanks a lot - also to <a href="https://pixabay.com/de/users/gellinger-201217/">Gellinger user of Pixabay, that provided us this wonderful picture</a><br>
+					And remember, as the german says, <a href="https://www.youtube.com/watch?v=-pFfJYyABzA"><i>mühsam ernährt sich das Eichhörnchen</i></a>.</p>
+
+					<p class="w3-text">
+						Thanks for taking the time to read this, let's <a href="https://www.youtube.com/watch?v=8Lu41LulQos">celebrate together!</a>.<br>
+						Don't lose hope in this still <a href="https://www.youtube.com/watch?v=ddLd0QRf7Vg">Wonderful Workd</a> and check out our <a href="/games.html#en">Games!</a><br>
+						See you soon!<br>
+					</p>
+					<p class="footnotes w3-medium">
+						References: <br>
+						[1] <a href="http://www.games4ed.org/who-we-are/why-games-are-important-to-education/" id="games4ed">Games4Ed - Why games are important to education</a><br>
+						[2] <a href="https://www.edutopia.org/blog/mangahigh-games-to-differentiate-instruction-kristof-mueller" id="edutopia">Edutopia - Using games to differentiate instructions</a><br>
+						[3] <a href="https://www.igi-global.com/pdf.aspx?tid%3D102618%26ptid%3D71690%26ctid%3D17%26t%3Dvideo+games+and+learning%3A+teaching+and+participatory+culture+in+the+digital+age%26isxn%3D9781466634978" id="bookreview">Book Review: Video Games and Learning: Teaching and Participatory Culture in the Digital Age, Dr. Kurt Squire</a><br>
+						[4] <a href="https://srcd.onlinelibrary.wiley.com/doi/full/10.1111/j.1467-8624.2007.01131.x" id="lowincome">Promoting Broad and Stable Improvements in Low‐Income Children’s Numerical Knowledge Through Playing Number Board Games - Ramani and Siegler</a><br>
+						[5] <a href="https://journals.sagepub.com/home/gac#" id="gamesandculture">Games and Culture</a><br>
+						[6] <a href="https://www.educationworld.com/a_news/study-finds-video-games-dont-improve-learning-1938718432" id="noimprove">Study finds video games don't improve learning</a><br>
+						[7] <a href="https://www.tandfonline.com/doi/pdf/10.1080/01443410.2014.923556" id="studypaywall">The actual study from <a href="#noimprove">[6]</a>, unfortunately behind paywall.</a><br>
+						[8] <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3905568/" id="teens">A Study of the Correlation between Computer Games and Adolescent Behavioral Problems, Shokouhi-Moqhaddam et al.</a><br>
+						[9] <a href="https://www.hindawi.com/journals/ijcgt/2019/4797032/" id="serious">A Meta-Analysis of Use of Serious Games in Education over a Decade</a><br>
+						[10] <a href="https://www.researchgate.net/publication/221247612_The_Relationship_between_Game_Genres_Learning_Techniques_and_Learning_Styles_in_Educational_Computer_Games" id="relation">The Relationship between Game Genres, Learning Techniques and Learning Styles in Educational Computer Games</a>
+					</p>
+					<br>
+				</div>
+
+
+				<div id="TLDR" class="w3-container menu w3-padding-32 w3-white w3-round">
+					<p> We want to promote critical thinking and new ideas of implicit collaboration even when we are compiting.
+						We want people to play, enjoy, have fun and at the same time incorporate some of the concepts that could 
+						help us develop a more fair and sustainable world! *</p>
+					<p style="font-size:16px"> * yes, these were actually 261 characters! And by reading this, you even added 85 more! 
+						Congratulations! You are above the average reader!
+						Statistics shows, <a href="https://www.go-gulf.ae/how-people-read-content-online/">average attention span for users in Internet dropped to 8 seconds</a>,
+						and reading speed is <a href="https://www.irisreading.com/what-is-the-average-reading-speed/">on average between 200 and 250 words per minute</a>,
+						making it around 4 words per second. So in 8 seconds, the average readers read 32 words, and our statement contains even 46!
+						You are doing great!</p>
+				</div><br>
+			</div>
+			
+			<div class="deutsch w3-animate-left">
+				<h1 class="w3-center w3-jumbo" style="margin-bottom:64px">Warum machen wir das?</h1>
+				<small>Warum machen wir Spiele? Was hat uns dazu bewogen, unsere Anstrengungen in dieses Projekt zu stecken, anstatt einfach 
+				einen normalen Job, unser Geld bekommen und glücklich leben? 
+				Sie können hier über unsere Motivation lesen, entweder die vollständige Erklärung oder, wenn Sie wirklich nicht mehr als 140 Zeichen lesen können :( , die kompakte Form auf der rechten Seite. </small>
+				<br>
+				Viel Spaß!
+				
+
+				<div class="w3-row w3-center w3-border w3-border-dark-grey w3-light-green w3-round">
+					<a href="javascript:void(0)" onclick="openMenu(event, 'FULL-de');" id="myLink-de">
+						<div class="w3-col s6 tablink w3-padding-large w3-hover-dark-grey">Vollständige Erläuterung</div>
+					</a>
+					<a href="javascript:void(0)" onclick="openMenu(event, 'TLDR-de');">
+						<div class="w3-col s6 tablink w3-padding-large w3-hover-dark-grey">Kurzgesagt</div>
+					</a>
+				</div>
+
+				<div id="FULL-de" class="w3-container menu w3-padding-32 w3-white w3-round"  style="font-size:20px">
+					<p> Wir sind unzufrieden damit, wie die Dinge in unserer Gesellschaft gemacht werden, das ist klar. Aber warum und wie genau? 
+						Das sind Fragen, die wir jeden Tag, wenn nicht sogar noch öfter, zu beantworten versuchen.
+						Auch wenn wir keine klare Antwort darauf haben, beginnen wir, einige Muster zu erkennen.
+						Die meisten Dinge, die wir tun, machen wir so, weil es <strong>leichter</strong> ist und 
+						denn <strong>wir sind es gewohnt, es auf diese Weise </strong> zu tun. 
+						Wenn wir also (sehr optimistisch, wenn) wir versuchen können, etwas zu tun, ist es, die Art und Weise zu ändern, wie die Menschen die alltägliche Aufgabe
+						und wie sie ihre Projekte planen. </p>
+					<br>  
+					<p class="w3-tag w3-round w3-blue" style="text-align:left"><strong>DISCLAIMER:</strong><br>
+						Wir sind uns bewusst, dass Spiele nur ein kleiner Teil unserer Ausbildung sind, und es gäbe noch viele andere Dinge 
+						für die wir stattdessen unsere Zeit aufwenden könnten. Aber jeder hat seine eigene Leidenschaft, und wir versuchen, die
+						was uns gefällt, mit dem, was wir tun sollten, also haben wir uns diesmal für dieses Projekt entschieden. 
+						Außerdem hat sich die Gamifizierung als eine unerwartet extrem leistungsfähige Ressource erwiesen! 
+						Wenn Sie uns nicht glauben,
+						Schauen Sie sich das <a href="https://worldpeacegame.org/">World Peace Game</a> oder sein <a href="https://www.ted.com/talks/john_hunter_teaching_with_the_world_peace_game">Ted Talk</a> für inspirierende Motive an, 
+						oder sehen Sie sich den <a href="https://www.ted.com/talks/jane_mcgonigal_gaming_can_make_a_better_world#t-516804">Jane McGonial Talk</a> an, um einen anderen Standpunkt dazu zu erfahren! 
+						<br>
+						PS: Sie (Jane) hat eine Menge <a href="https://www.ted.com/speakers/jane_mcgonigal">Videos</a> darüber!
+					</p>
+					<br>
+					<p class="w3-text w3-xlarge"> <b>Wir haben uns also die besten Brettspiele angeschaut, die es derzeit gibt. Was haben wir gefunden? </b></p>
+					<p class="w3-center w3-round w3-medium"><img src="img/topgames.png" style="width:60%"><br>Das war Anfang des Jahres 2020. Natürlich wird sich das ändern, aber die Themen werden höchstwahrscheinlich ähnlich bleiben</p>
+					<p> Unter den Top 10 geht es bei den meisten Spielen um Abenteuer, um Reisen, um neue Orte zu entdecken, stärker zu werden und den Gegner zu besiegen.
+					Wir sehen Spiele, in denen Sie eine neue Zivilisation erschaffen (ob auf dem Mars, wie <a href="https://boardgamegeek.com/boardgame/167791/terraforming-mars">Terraforming Mars (2016)</a> 
+						oder auf einer Fantasiewelt, wie <a href="https://boardgamegeek.com/boardgame/182028/through-ages-new-story-civilization">Through the Ages: A New Story of Civilization (2015)</a>
+						oder <a href="https://boardgamegeek.com/boardgame/220308/gaia-project">Gaia Project (2017)</a>, bei dem Sie andere Planeten kolonisieren müssen). 
+						und Ihr Ziel ist es immer, mehr zu produzieren oder stärker zu sein als die anderen. 
+						<br>
+						Die beiden Dämmerungsspiele (<a href="https://boardgamegeek.com/boardgame/233078/twilight-imperium-fourth-edition">Twilight Imperium (2017)</a>
+						und <a href="https://boardgamegeek.com/boardgame/12333/twilight-struggle">Twilight Struggle (2005) )</a> und 
+						die <a href="https://boardgamegeek.com/boardgame/12333/twilight-struggle">Star Wars: Rebellion (2016)</a> 
+						nutzt das Thema epische Konflikte mit verschiedenen Szenarien, die vom realen Weltereignis bis hin zu weit entfernten Galaxien reichen.
+						<br>
+						Es gibt auch Spiele mit sehr ausgeklügelten und komplexen Mechanismen 
+						die Simulation konkurrierender Unternehmer (<a href="https://boardgamegeek.com/boardgame/224517/brass-birmingham">Brass: Birmingham (2018)</a>), 
+						die den Aufstieg osteuropäischer Länder (<a href="https://boardgamegeek.com/boardgame/169786/scythe">Scythe (2016) ) simuliert, die reale Umgebungen haben.</a>
+						<br>
+						Eine Ausnahme bildet das kooperative <a href="https://boardgamegeek.com/boardgame/161936/pandemic-legacy-season-1">Pandemic Legacy: Season 1 (2015)</a>, die sich aus dem Spiel <a href="https://boardgamegeek.com/boardgame/30549/pandemic">Pandemic (2008)</a> ableitet, in dem alle zusammenarbeiten, um die Welt vor einer sich ausbreitenden Krankheit zu retten.
+						Ein Spiel, das wahrscheinlich in diesen Zeiten (März 2020) sehr gut zu unserer aktuellen Situation passt, in der eine weltweite Zusammenarbeit dringend erforderlich ist.
+						<br>
+					</p>
+					<p class="w3-text w3-xlarge">
+						<b>Warten Sie einen Moment: Was stimmt mit diesen Spielen nicht?</b>
+					</p>
+					<p class="w3-text">
+						An sich nichts. Aber wir glauben, dass Spiele einen Einfluss darauf haben können und haben, wie wir lernen und denken, und möchten daher zumindest eine breitere Palette von Themen in den Spielen behandeln.
+					</p>
+						<p class="w3-tag w3-round w3-blue" style="text-align:left"><strong>DISKUSSION: Wenn Sie gerne diskutieren möchten, lesen Sie diesen Kasten. Wenn es Sie nicht interessiert, warum sind Sie dann überhaupt hier? Geschweige denn Witze, wenn Sie informiert sind, können Sie das hier überspringen.</strong><br><br>
+							Ob Spiele tatsächlich eine Wirkung haben und welche Art von Wirkung wäre eine nette Diskussion, können Sie hier einige Artikel über allgemeine Ideen und Plattformen lesen, wie Games4Ed <a href="#games4ed">[1]</a>, Edutopia <a href="#edutopia">[2]</a>, Buchbesprechungen <a href="#bookreview">[3]</a> oder wissenschaftliche Literatur zum Thema <a href="#lowincome">[4]</a>. Hier finden Sie einen ganzen Abschnitt einer Zeitschrift über Spiel und Kultur <a href="#gamesandculture">[5]</a>.
+							<br>
+							Da wir unser Bestes versuchen, <a href="https://waitbutwhy.com/2019/09/thinking-ladder.html">wie Wissenschaftler zu denken (wenn Sie nicht verstehen, was wir hier meinen, lesen Sie den verlinkten Artikel! Ja, er ist super lang, aber super interessant)</a>, müssen wir auch einen Überblick über die Literatur gegen unsere Ideen geben. Beispielsweise fanden Studien heraus, dass Videospiele das Lernen nicht verbessern <a href="#noimprove">[6]</a>, Quelle <a href="#studypaywall">[7]</a> oder fanden eine Korrelation zwischen Videospielen und Verhaltensproblemen von Jugendlichen <a href="#teens">[8]</a>.
+							<br>
+							Zum Abschluss der Diskussion erwähnen wir auch die allgemeine Analyse, wenn Sie sich wirklich mit dem Thema beschäftigen, können Sie eine ernsthafte <i>A Meta-Analysis of Use of Serious Games in Education over a Decade</i> <a href="#serious">[9]</a> oder die Beziehungen zwischen Spielgenres, Lernstilen und pädagogischen Computerspielen <a href="#relation">[10]</a> lesen.
+							<br><br>
+							Im Grunde geht es darum, eine informierte Diskussion zu fördern! Lesen Sie, was immer Sie wollen (und fügen Sie ruhig etwas hinzu, wenn Sie wollen, natürlich ist die Website quelloffen (der vollständige Code ist tatsächlich verfügbar <a href="https://github.com/spielinkiel/spielinkiel.github.io">hier auf Github</a>, und Sie können gerne Änderungen vorschlagen) und viel Spaß!
+						</p>
+					<p class="w3-text">
+						Ok, zurück zu unseren Spielen. Stellen wir uns nun vor, wir wollen <i>die Welt zu einem besseren Ort machen</i> (wenn Sie dafür Hilfe brauchen, im Wiki - wie es einen einfachen Leitfaden gibt auf <a href="https://www.wikihow.com/Make-the-World-a-Better-Place">How to make the world a better place (with Pictures)</a> - oder sehen Sie sich eine Inspiration an <a href="https://www.youtube.com/watch?v=o08ykAqLOxk">Gespräch</a> darüber), dann sollten wir eine ganz andere Art von Spielen in den Top 10 haben. <br>
+						Würde man jetzt zu Erklärungszwecken übertreiben, sähen die Spitzenspiele so aus:
+					</p>
+					<p class="w3-center w3-round w3-medium"><img src="https://en.unesco.org/sites/default/files/sdgs_poster_936_en.png" style="width:70%"><br><a href="https://www.youtube.com/watch?v=YkgkThdzX-8">Imagine</a> wenn die Spitzenspiele den Zielen der nachhaltigen Entwicklung entsprechen würden..</p>
+					<p class="w3-text">
+						Denken wir nun über <i>why</i> das ist nicht der Fall. Wir vermuten, eine der Hauptursachen dafür ist, dass es <i>langweilig</i> wäre. Wollen Sie ein Spiel spielen, bei dem Sie den Reichtum umverteilen und Systeme aufbauen müssen, um die Einkommensungleichheit zu verringern? Denken Sie daran, dass Sie, wenn Sie das Spiel spielen, höchstwahrscheinlich zu den Menschen gehören, die mehr Reichtum haben, also im Grunde genommen sollten Sie etwas aufgeben, das Sie haben, und es Menschen geben, die Sie nie gesehen haben und nie sehen werden, ohne jede Garantie, dass sie es besser nutzen werden, Gleichheit würde nur bedeuten, dass sie die gleichen Möglichkeiten haben wie Sie. Das klingt nicht sehr lustig, oder? Wenn Sie das bereits tun, <a href="https://www.youtube.com/watch?v=5-k4ykdvQtw">Hut ab vor Ihnen</a>, und hoffen, dass Sie viele Kinder machen, die mit Ihren Ideen aufwachsen werden.<br>
+						Wenn Sie jedoch mehr wie wir sind - seien wir ehrlich, faule Menschen, die etwas Gutes tun und am Ende überleben wollen, indem sie versuchen, mit minimalem Aufwand maximale Ergebnisse zu erzielen - dann brauchen wir etwas, das mehr Spaß macht und zum Spielen motiviert.
+					</p>
+					<p class="w3-text w3-xlarge">
+						<b>Also, Du, die/der alles weißt, warum ist es langweilig und wie kann es lustig gemacht werden?</b>
+					</p>
+					<p class="w3-text">
+						<b>Wir wissen es ehrlich gesagt nicht. Wir zaubern und denken, das gefällt uns am besten. Aber nehmen Sie diese bitte nicht als definitive Antworten. </b><br>
+						Darum geht es auch bei diesem Projekt - eine introspektive Untersuchung dazu. Was wir zu sehen begannen, ist ein Muster, das teilweise erklären kann, warum es sehr schwer ist, sich zu erfreuen und an Solidaritätszwecken festzuhalten.<br>
+						Es gibt 2 Hauptpunkte: <br>
+						- Wir haben nichts davon. Für viele Dinge bekommen wir (zumindest in der kurzen Zeit) keine Belohnung. Natürlich mögen sich einige Leute <i>besser fühlen</i>, weil sie etwas getan haben, das sie für gut halten (wir können das Gute nicht beurteilen, also bleiben wir bei der Idee, dass jeder das Gute anders betrachtet), aber das reicht normalerweise nicht aus. Zum Beispiel beim Klimawandel (oder der noch aktuelleren Pandemie, wenn man dies im Jahr 2020 liest) ist das <i>Gewinn</i>Ergebnis die Erhaltung der tatsächlichen Situation. Aber da wir nicht wissen, wie es wäre, wenn wir nicht aufpassen (niemand kann es wissen), ist es sehr schwer, sich für etwas einzusetzen, das wir nicht kennen. <br>
+						- Es gibt ein unterstrichenes implizites Kooperationssystem, das denjenigen begünstigt, der tatsächlich egoistisch ist. Es mag hart klingen, das zu sagen, aber die einzelne (oder teilweise, d.h. von einer Gruppe, aber nicht von der Gesamtheit der Menschen) Anstrengung in eine Richtung kann tatsächlich dazu führen, dass der Rest der Menschen weniger dagegen tut. Eine sehr coole grafische Erklärung ist in diesem sehr coolen <a href="https://www.youtube.com/watch?v=lFEgohhfxOA">Video</a> zu sehen, in dem eine simulierte Bevölkerung mit zwei Genen (altruistisch und egoistisch oder normal) ein sehr vereinfachtes Lebensmodell leben gelassen wird. Wie erwartet, neigt die Population mit dem altruistischen Gen dazu, sich zu verkleinern, weil sie den anderen helfen, indem sie nichts zurückbekommen. <br>
+						Natürlich ist dies eine übertriebene Provokation, im wirklichen Leben ist es nicht so, aber wir wollten den Punkt in nur wenigen Zeilen vermitteln - etwas, worin wir schrecklich sind, wie Sie verstanden haben, wenn Sie bis zu dieser Zeile lesen. Im Grunde genommen, um zu versuchen, es mit einem noch einfacheren Beispiel zu veranschaulichen, wenn wir das Problem der globalen Erwärmung durch das Pflanzen von Bäumen lösen wollen (Spoiler: <span class="show" onclick="show(globalwarming)">click, um zu sehen</span><span class="spoiler" id="globalwarming" style="display: none;">es wird nicht funktionieren, aber netter Versuch, weiter so! </span>), Daten aus einer Studie von 2010 zu sammeln, würden Sie ungefähr 1.545.000.000.000 Bäume benötigen (Berechnungen <a href="https://earthscience. stackexchange.com/questions/2639/how-many-trees-would-i-have-to-plant-to-solve-global-warming">here</a>, danke <a href="https://earthscience.stackexchange.com/users/624/dikran-marsupial">Dikran Marsupial</a> und <a href="https://earthscience.stackexchange.com/users/6298/jeopardytempest">JeopardyTempest</a>). Wenn nun eine sehr großzügige Person 1.545.000.000.020 Bäume pflanzt (20 mehr als nötig), könnte man tatsächlich 20 Bäume fällen, um ein schönes Lagerfeuer zu machen, und das Problem der globalen Erwärmung wäre immer noch gelöst. Aber wenn dieselbe Person 1.544.999.999.999.980 Bäume gepflanzt hätte (20 weniger als nötig), müssten Sie 20 weitere Bäume pflanzen und könnten niemanden für Sie fällen! <br>
+						Damit meinen wir nicht, dass, wenn jemand anderes etwas tut, um Ihnen zu helfen, Sie nicht mehr helfen müssen, aber Sie haben es verstanden. Wie motivieren wir alle zur Zusammenarbeit?
+					</p>
+					<p class="w3-text w3-xlarge">
+						<b>Trotzdem verstehe ich es nicht, wann es um den lustigen Teil kommt?</b>
+					</p>
+					<p class="w3-text">
+						Ja, ich auch nicht. Wir arbeiten daran, das verspreche ich. Wir versuchen, uns von den lustigsten und unterhaltsamsten Spielen inspirieren zu lassen und versuchen, diese Muster, Ideen und Strategien in unser Modell der impliziten Zusammenarbeit zu integrieren. Manchmal machen wir komplizierte Spiele, um zu versuchen, das Modell besser zu simulieren, manchmal einfachere Spiele, bei denen man sich mehr entspannen kann. <br>
+						Da auch wir weder die Antwort noch die Lösung des Problems kennen, können wir am besten die Diskussion anregen. Wenn wir bereits einige Referenzen, einige Themen und Muster in das Spiel einbauen, können wir den Leuten helfen, einige <a href="https://www.dasbuntedeck.de/">Widersprüche zu erkennen, sie zu diskutieren und vielleicht die Lösung zu finden und uns zu helfen!
+					</p>
+					<p class="w3-center w3-round w3-medium"><img src="https://cdn.pixabay.com/photo/2020/03/19/08/48/animal-world-4946785_960_720.jpg" style="width:70%"><br>Vielen Dank - auch an <a href="https://pixabay.com/de/users/gellinger-201217/">Gellinger-Nutzer von Pixabay, die uns dieses wunderbare Bild zur Verfügung gestellt haben</a><br>
+					Bitte nicht vergessen, <a href="https://www.youtube.com/watch?v=-pFfJYyABzA"><i>mühsam ernährt sich das Eichhörnchen</i></a>.</p>
+
+					<p class="w3-text">
+						Danke, dass Sie sich die Zeit genommen haben, dies zu lesen, lassen Sie uns <a href="https://www.youtube.com/watch?v=8Lu41LulQos">zusammen feiern!</a>.<br>
+						Verlieren Sie nicht die Hoffnung in dieser immer noch <a href="https://www.youtube.com/watch?v=ddLd0QRf7Vg">Wundervolle Welt</a> und schauen Sie sich unsere <a href="/games.html#en">Spiele an!</a><br>
+						Bis bald!<br>
+					</p>
+					<p class="footnotes w3-medium">
+						Referenzen: <br>
+						[1] <a href="http://www.games4ed.org/who-we-are/why-games-are-important-to-education/" id="games4ed">Games4Ed - Why games are important to education</a><br>
+						[2] <a href="https://www.edutopia.org/blog/mangahigh-games-to-differentiate-instruction-kristof-mueller" id="edutopia">Edutopia - Using games to differentiate instructions</a><br>
+						[3] <a href="https://www.igi-global.com/pdf.aspx?tid%3D102618%26ptid%3D71690%26ctid%3D17%26t%3Dvideo+games+and+learning%3A+teaching+and+participatory+culture+in+the+digital+age%26isxn%3D9781466634978" id="bookreview">Book Review: Video Games and Learning: Teaching and Participatory Culture in the Digital Age, Dr. Kurt Squire</a><br>
+						[4] <a href="https://srcd.onlinelibrary.wiley.com/doi/full/10.1111/j.1467-8624.2007.01131.x" id="lowincome">Promoting Broad and Stable Improvements in Low‐Income Children’s Numerical Knowledge Through Playing Number Board Games - Ramani and Siegler</a><br>
+						[5] <a href="https://journals.sagepub.com/home/gac#" id="gamesandculture">Games and Culture</a><br>
+						[6] <a href="https://www.educationworld.com/a_news/study-finds-video-games-dont-improve-learning-1938718432" id="noimprove">Study finds video games don't improve learning</a><br>
+						[7] <a href="https://www.tandfonline.com/doi/pdf/10.1080/01443410.2014.923556" id="studypaywall">The actual study from <a href="#noimprove">[6]</a>, unfortunately behind paywall.</a><br>
+						[8] <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3905568/" id="teens">A Study of the Correlation between Computer Games and Adolescent Behavioral Problems, Shokouhi-Moqhaddam et al.</a><br>
+						[9] <a href="https://www.hindawi.com/journals/ijcgt/2019/4797032/" id="serious">A Meta-Analysis of Use of Serious Games in Education over a Decade</a><br>
+						[10] <a href="https://www.researchgate.net/publication/221247612_The_Relationship_between_Game_Genres_Learning_Techniques_and_Learning_Styles_in_Educational_Computer_Games" id="relation">The Relationship between Game Genres, Learning Techniques and Learning Styles in Educational Computer Games</a>
+					</p>
+					<br>
+				</div>
+
+
+				<div id="TLDR-de" class="w3-container menu w3-padding-32 w3-white w3-round">
+					<p> Wir wollen kritisches Denken und neue Ideen der impliziten Zusammenarbeit fördern, auch wenn wir uns an Komplizenschaft beteiligen.
+						Wir wollen, dass die Menschen spielen, Spaß haben und gleichzeitig einige der Konzepte einbeziehen, die 
+						Helfen Sie uns, eine gerechtere und nachhaltigere Welt zu entwickeln! *</p>
+					<p style="font-size:16px"> * Ja, das waren tatsächlich 304 Zeichen! Und als Sie dies gelesen haben, haben Sie sogar 111 weitere hinzugefügt! 
+						Herzlichen Glückwunsch! Sie liegen über dem Durchschnitt der Leser!
+						Die Statistik zeigt, <a href="https://www.go-gulf.ae/how-people-read-content-online/">durchschnittliche Aufmerksamkeitsspanne der Benutzer im Internet ist auf 8 Sekunden</a> gesunken,
+						und die Lesegeschwindigkeit liegt <a href="https://www.irisreading.com/what-is-the-average-reading-speed/">im Durchschnitt zwischen 200 und 250 Wörtern pro Minute</a>,
+						das sind etwa 4 Wörter pro Sekunde. In 8 Sekunden hat der durchschnittliche Leser also 32 Wörter gelesen, und unsere Aussage enthält sogar 46!
+						Sie machen das großartig!</p>
+				</div><br>
+			</div>
+			
+		</div>
   </div>
 </div>
 
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-48 w3-xxlarge">
   <p style="font-size:14px"><a href="impressum.html">Impressum</a> | <a href="mailto:spielinkiel@freenet.de"><img src="icons/mail.png" width="50px"></a> <a href="https://www.facebook.com/Wandelw%C3%BCrfel-115820006634950/"><img src="icons/fb.png" width="47px"></a> <a href="https://www.instagram.com/kielwandelwuerfel/"><img src="icons/insta_icon.png" width="47px"></a></p>
-  <p>Made with <img src="img/heart.png" width="50"> in Kiel! - Powered by <a href="https://fairnetz-kiel.de/" title="Fairnetz Kiel" target="_blank" class="w3-hover-text-green"><img src="img/fn_logo.png" width="100"></a></p>
+  <p class="english">Made with <img src="img/heart.png" width="50"> in Kiel! - Powered by <a href="https://fairnetz-kiel.de/" title="Fairnetz Kiel" target="_blank" class="w3-hover-text-green"><img src="img/fn_logo.png" width="100"></a></p>
+	<p class="deutsch">Mit <img src="img/heart.png" width="50"> in Kiel gemacht! - Powered by <a href="https://fairnetz-kiel.de/" title="Fairnetz Kiel" target="_blank" class="w3-hover-text-green"><img src="img/fn_logo.png" width="100"></a></p>
 </footer>
-
+	
 <script>
+// is this really working?    YES!
+function changeLanguage(lang) {
+	if (lang == 'english') {
+		var deutsche_teile = document.getElementsByClassName("deutsch")
+		for (i = 0; i < deutsche_teile.length; i++) {
+			deutsche_teile[i].style.display = "none";
+		} 
+		var english_parts = document.getElementsByClassName("english")
+		for (i = 0; i < english_parts.length; i++) {
+			english_parts[i].style.display = "inline";
+		} 
+		document.getElementById("myLink").click();
+	}
+	if (lang == 'deutsch') {
+		var deutsche_teile = document.getElementsByClassName("deutsch")
+		for (i = 0; i < deutsche_teile.length; i++) {
+			deutsche_teile[i].style.display = "inline";
+		} 
+		var english_parts = document.getElementsByClassName("english")
+		for (i = 0; i < english_parts.length; i++) {
+			english_parts[i].style.display = "none";
+		} 
+		document.getElementById("myLink-de").click();
+	}
+}
+var hashtaglanguage = window.location.hash;
+if (hashtaglanguage == "#en") {
+	document.getElementById("languageEN").click();
+	document.getElementById("myLink").click();
+}
+else if (hashtaglanguage == "#de") {
+	document.getElementById("languageDE").click();
+	document.getElementById("myLink-de").click();
+}
+else {
+	document.getElementById("languageDE").click();
+	document.getElementById("myLink-de").click();
+	document.getElementById("myLink").click();
+}
 // Tabbed Menu
 function openMenu(evt, menuName) {
   var i, x, tablinks;
@@ -118,7 +402,8 @@ function openMenu(evt, menuName) {
   document.getElementById(menuName).style.display = "block";
   evt.currentTarget.firstElementChild.className += " w3-black";
 }
-document.getElementById("myLink").click();
+document.getElementById("myLink").click();	
+document.getElementById("myLink-de").click();	
 </script>
 
 </body>

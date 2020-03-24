@@ -1,6 +1,7 @@
+
 <!DOCTYPE html>
 <html>
-<title>Games!</title>
+<title>Welcome!</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -12,12 +13,17 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
 .bgimg {
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("https://raw.githubusercontent.com/kalou91/kalou91.github.io/master/spiel2.jpg");
+  background-image: url("");
   min-height: 90%;
+}
+.fadeIn {
+	animation:opac 1.8s;
+	@keyframes opac{from{opacity:0} to{opacity:1}};
 }
 </style>
 <body>
 
+<!-- Navbar (sit on top) -->
 <div class="w3-top w3-hide-small">
     <div class="w3-bar w3-xlarge w3-black w3-opacity w3-hover-opacity-off" id="myNavbar" >
 			<div id="leftpart-english" class="english">
@@ -44,64 +50,44 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
 				</div>
 			</div>
     </div>
-</div>	
+</div>
   
-<!-- Games Container -->
-<div class="w3-container w3-padding-64 w3-green w3-xlarge" id="about">
-	<div class="w3-padding">
+
+
+<!-- Contact -->
+<div class="w3-container w3-padding-64 w3-blue-grey w3-grayscale-min w3-xlarge" id="contact">
+	<div class="fadeIn">
 		<div class="english w3-animate-right">
-			<h1 class="w3-center w3-jumbo" style="margin-bottom:64px">Our Games</h1>
-			<p> We would like to address in an ironic and critical way different problems or challenges in our society.<br>
-				We have lots of ideas, and we are starting with a big classic: climate change! The first game will be related with this theme.</p>
-			<!-- PHOTOs id="gamesgrid" style="margin-bottom:128px"-->
-			<div class="w3-row-padding">
-				<div class="w3-col s4 w3-round w3-orange" style="border-style: solid;border-width:thick; border-color: red">
-					<p class="w3-text w3-center w3-xxlarge"> <a href="games/co2.html">Carbonii dioxidum</a> </p>
-					<a href="games/co2.html"><img src="img/co2_tmp.JPG" style="width:100%"></a>
-					<p class="w3-text w3-large w3-center">A complex board game about climate change</p>
-				</div>
-
-				<!--
-				<div class="w3-col s4">
-					<img src="img/coming_soon1.jpg" style="width:100%">
-					<p style="text-align:center"> Beispiel 2 </p>
-				</div>
-
-				<div class="w3-col s4">
-					<img src="img/coming_soon.png" style="width:100%">
-					<p style="text-align:center"> Beispiel 3 </p>
-				</div>
-				-->
+			<div class="w3-padding">
+				<p class="w3-center w3-jumbo" style="margin: 10px">Contact</p>
 			</div>
 		</div>
 		<div class="deutsch w3-animate-left">
-			<h1 class="w3-center w3-jumbo" style="margin-bottom:64px">Unsere Spiele</h1>
-			<p> Wir möchten auf ironische und kritische Weise verschiedene Probleme oder Herausforderungen in unserer Gesellschaft ansprechen.<br>
-				Wir haben viele Ideen, und wir beginnen mit einem großen Klassiker: dem Klimawandel! Das erste Spiel wird mit diesem Thema verbunden sein.</p>
-			<!-- PHOTOs id="gamesgrid" style="margin-bottom:128px"-->
-			<div class="w3-row-padding">
-				<div class="w3-col s4 w3-round w3-orange" style="border-style: solid;border-width:thick; border-color: red">
-					<p class="w3-text w3-center w3-xxlarge"> <a href="games/co2.html">Carbonii dioxidum</a> </p>
-					<a href="games/co2.html"><img src="img/co2_tmp.JPG" style="width:100%"></a>
-					<p class="w3-text w3-large w3-center">Ein komplexes Brettspiel über den Klimawandel</p>
-				</div>
-
-				<!--
-				<div class="w3-col s4">
-					<img src="img/coming_soon1.jpg" style="width:100%">
-					<p style="text-align:center"> Beispiel 2 </p>
-				</div>
-
-				<div class="w3-col s4">
-					<img src="img/coming_soon.png" style="width:100%">
-					<p style="text-align:center"> Beispiel 3 </p>
-				</div>
-				-->
+			<div class="w3-padding">
+				<p class="w3-center w3-jumbo" style="margin: 10px">Kontakt</p>
 			</div>
+		</div>
+		<p class="w3-center w3-medium"><img src="https://cdn.pixabay.com/photo/2017/07/05/19/31/animal-2475743_960_720.jpg" width="60%" class="w3-center"><br>Thanks kind <a href="https://pixabay.com/de/users/aknourkova-5823168/">Aknourkova</a></p>
+		<div class="english w3-animate-right">
+			<div class="w3-content">
+				<p>Do you like or hate our ideas or games? Do you have new awesome ideas?</p>
+				<p>Send us a mail at:</p>
+				<p>spielinkiel@freenet.de</p>
+			</div>
+		</div>
+		<div class="deutsch w3-animate-left">
+			<div class="w3-content">
+				<p>Mögen oder hassen Sie unsere Ideen oder Spiele? Haben Sie neue tolle Ideen?</p>
+				<p>Schreib uns an:</p>
+				<p>spielinkiel@freenet.de</p>
+			</div>
+		</div>
+
 		</div>
 	</div>
 </div>
-  
+
+
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-48 w3-xxlarge">
   <p style="font-size:14px"><a href="impressum.html">Impressum</a> | <a href="mailto:spielinkiel@freenet.de"><img src="icons/mail.png" width="50px"></a> <a href="https://www.facebook.com/Wandelw%C3%BCrfel-115820006634950/"><img src="icons/fb.png" width="47px"></a> <a href="https://www.instagram.com/kielwandelwuerfel/"><img src="icons/insta_icon.png" width="47px"></a></p>
@@ -144,7 +130,6 @@ else {
 	document.getElementById("languageDE").click();
 }
 </script>
-
 
 </body>
 </html>

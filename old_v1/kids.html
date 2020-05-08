@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<title>Welcome!</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gotu">
+<style>
+body, html {height: 100%}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Gotu", sans-serif}
+.menu {display: none}
+.bgimg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("");
+  min-height: 90%;
+}
+.fadeIn {
+	animation:opac 1.8s;
+	@keyframes opac{from{opacity:0} to{opacity:1}};
+}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top w3-hide-small">
+    <div class="w3-bar w3-large w3-white w3-opacity w3-hover-opacity-off" id="myNavbar" >
+			<div id="leftpart-english" class="english">
+        <a href="index.html#en" class="w3-bar-item w3-button">HOME</a>
+        <a href="games.html#en" class="w3-bar-item w3-button button">GAMES</a>
+        <a href="why.html#en" class="w3-bar-item w3-button button">WHY</a>
+        <a href="kids.html#en" class="w3-bar-item w3-button button">ABOUT US</a>
+        <a href="contact.html#en" class="w3-bar-item w3-button button">CONTACT</a>
+			</div>
+			<div id="leftpart-deutsch" style="display: none" class="deutsch">
+        <a href="index.html#de" class="w3-bar-item w3-button">HOME</a>
+        <a href="games.html#de" class="w3-bar-item w3-button">SPIELE</a>
+        <a href="why.html#de" class="w3-bar-item w3-button button">WARUM</a>
+        <a href="kids.html#de" class="w3-bar-item w3-button button">WER SIND WIR</a>
+        <a href="contact.html#de" class="w3-bar-item w3-button button">KONTAKT</a>
+			</div>
+			<div class="w3-display-topright" style="padding-right: 30px;">
+				<div class="w3-button">
+        	<a href="#de" onclick="changeLanguage('deutsch');" id="languageDE" ><img src="icons/germany-flag-3d-icon-32.png"></a>
+				</div>
+				&nbsp;
+				<div class="w3-button">
+					<a href="#en" onclick="changeLanguage('english');" id="languageEN" ><img src="icons/united-kingdom-flag-3d-icon-32.png"></a>
+				</div>
+			</div>
+    </div>
+</div>
+  
+
+<!-- About Container -->
+<div class="w3-container w3-padding-64 w3-green w3-xlarge" id="about">
+	<div class="">
+		<div class="english w3-animate-right">
+			<div class="w3-padding">
+				<h1 class="w3-center w3-jumbo" style="margin-bottom:64px">Welcome to the People</h1>
+				<p>Our great team is diverse and colorful, everybody brings their own ideas and perspective! 
+					Only thanks to these amazing people we are able to create a sustainable community also for games!</p>
+				<br>   
+
+				<div class="w3-row">
+					<div class="w3-col s2">
+						<p style="text-align:center">Utku</p>
+						<img src="img/utku2.png" style="width:100%" alt="Utku">
+						<p class="w3-text w3-medium">Never run out of business ideas, you find him around campus distributing tips for success to everyone.</p>
+					</div>
+					<div class="w3-col s2">
+						&nbsp; &nbsp;
+					</div>
+					<div class="w3-col s2">
+						<p style="text-align:center">Gonzalo</p>
+						<img src="img/gonz.png" style="width:100%" onclick="onClick(this)" alt="Gonzalo">
+						<p class="w3-text w3-medium">You can find him around collecting glass and plastic bottles and bringing it back to the supermarket.</p>
+					</div>
+					<div class="w3-col s2">
+						&nbsp; &nbsp;
+					</div>
+					<div class="w3-col s2">
+						<p style="text-align:center">Luca</p>
+						<img src="img/luca.png" style="width:100%" onclick="onClick(this)" alt="Luca">
+						<p class="w3-text w3-medium">Too old to play sports, he got into board games. He loves cleaning his room and playing with his smartphone. </p>
+					</div>
+					<div class="w3-col s2">
+						&nbsp; &nbsp;
+					</div>
+				</div>
+				<!-- SECOND ROW -->
+				<div class="w3-row">
+					<div class="w3-col s2">
+						&nbsp; &nbsp;
+					</div>
+					<div class="w3-col s2">
+						<p style="text-align:center">Edson</p>
+						<img src="img/edson.png" style="width:100%" onclick="onClick(this)" alt="Edson">
+						<p class="w3-text w3-medium">Eager to wake up early, he enjoys sunbathing in the hot summer days.</p>
+					</div>
+					<div class="w3-col s2">
+						&nbsp;
+					</div>
+					<div class="w3-col s2">
+						<p style="text-align:center">Asli</p>
+						<img src="img/asli2.png" style="width:100%" onclick="onClick(this)" alt="Asli">
+						<p class="w3-text w3-medium w3-center">Relaxed and very organized, never arrived one single minute late.</p>
+					</div>
+					<div class="w3-col s2">
+						&nbsp;
+					</div>
+					<div class="w3-col s2">
+						<p style="text-align:center">Iulia</p>
+						<img src="img/iulia.png" style="width:100%" onclick="onClick(this)" alt="Iulia">
+						<p class="w3-text w3-medium">Our antidote to stress, always able to find the perfect balance between work and life.</p>
+					</div>
+				</div>
+				<!-- THIRD ROW -->
+				<div class="w3-row">
+					<div class="w3-col s2">
+						<p style="text-align:center">Luisa</p>
+						<img src="img/luisa.png" style="width:90%" style="height:100%" onclick="onClick(this)" alt="Luisa">
+						<p class="w3-text w3-medium">Dr. Green, the inventor of the best Sustainability Game.</p>
+					</div>
+					<div class="w3-col s2">
+						&nbsp;
+					</div>
+					<div class="w3-col s2">
+						<p style="text-align:center">Braulio</p>
+						<img src="img/bra.png" style="width:100%" onclick="onClick(this)" alt="Braulio">
+						<p class="w3-text w3-medium">Presenter and Conductor of Sustainability Today.</p>
+					</div>
+					<div class="w3-col s2">
+						&nbsp;
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+		<!-- DEUTSCHE VERSION -->
+		<div class="deutsch w3-animate-left">
+			<div class="w3-padding">
+				<h1 class="w3-center w3-jumbo w3-xlarge" style="margin-bottom:64px">Willkommen bei den Menschen</h1>
+				<p>Unser tolles Team ist vielfältig und bunt, jeder bringt seine eigenen Ideen und Perspektiven mit! 
+					Nur dank dieser erstaunlichen Menschen sind wir in der Lage, eine nachhaltige Gemeinschaft auch für Spiele zu schaffen!</p>
+				<br>   
+
+				<div class="w3-row">
+					<div class="w3-col s2">
+						<p style="text-align:center">Utku</p>
+						<img src="img/utku2.png" style="width:100%" onclick="onClick(this)" alt="Utku">
+						<p class="w3-text w3-medium">Die Geschäftsideen gehen ihm nie aus, er verteilt auf dem Campus Tipps für den Erfolg an alle.</p>
+					</div>
+					<div class="w3-col s2">
+						&nbsp; &nbsp;
+					</div>
+					<div class="w3-col s2">
+						<p style="text-align:center">Gonzalo</p>
+						<img src="img/gonz.png" style="width:100%" onclick="onClick(this)" alt="Gonzalo">
+						<p class="w3-text w3-medium">Man findet ihn beim Sammeln von Glas- und Plastikflaschen und beim Zurückbringen in den Supermarkt.</p>
+					</div>
+					<div class="w3-col s2">
+						&nbsp; &nbsp;
+					</div>
+					<div class="w3-col s2">
+						<p style="text-align:center">Luca</p>
+						<img src="img/luca.png" style="width:100%" onclick="onClick(this)" alt="Luca">
+						<p class="w3-text w3-medium">Zu alt, um Sport zu treiben, hat er sich für Brettspiele interessiert. Er liebt es, sein Zimmer zu putzen und mit seinem Smartphone zu spielen. </p>
+					</div>
+					<div class="w3-col s2">
+						&nbsp; &nbsp;
+					</div>
+				</div>
+				<!-- SECOND ROW -->
+				<div class="w3-row">
+					<div class="w3-col s2">
+						&nbsp; &nbsp;
+					</div>
+					<div class="w3-col s2">
+						<p style="text-align:center">Edson</p>
+						<img src="img/edson.png" style="width:100%" onclick="onClick(this)" alt="Edson">
+						<p class="w3-text w3-medium">Er ist begierig darauf, früh aufzustehen und genießt das Sonnenbad in den heißen Sommertagen.</p>
+					</div>
+					<div class="w3-col s2">
+						&nbsp;
+					</div>
+					<div class="w3-col s2">
+						<p style="text-align:center">Asli</p>
+						<img src="img/asli2.png" style="width:100%" onclick="onClick(this)" alt="Asli">
+						<p class="w3-text w3-medium">Entspannt und sehr organisiert, kam nie auch nur eine Minute zu spät.</p>
+					</div>
+					<div class="w3-col s2">
+						&nbsp;
+					</div>
+					<div class="w3-col s2">
+						<p style="text-align:center">Iulia</p>
+						<img src="img/iulia.png" style="width:100%" onclick="onClick(this)" alt="Iulia">
+						<p class="w3-text w3-medium">Unser Gegenmittel gegen Stress, immer in der Lage, die perfekte Balance zwischen Arbeit und Leben zu finden.</p>
+					</div>
+				</div>
+				<!-- THIRD ROW -->
+				<div class="w3-row">
+					<div class="w3-col s2">
+						<p style="text-align:center">Luisa</p>
+						<img src="img/luisa.png" style="width:90%" style="height:100%" onclick="onClick(this)" alt="Luisa">
+						<p class="w3-text w3-medium">Dr. Green, die Erfinderin des besten Nachhaltigkeitsspiels.</p>
+					</div>
+					<div class="w3-col s2">
+						&nbsp;
+					</div>
+					<div class="w3-col s2">
+						<p style="text-align:center">Braulio</p>
+						<img src="img/bra.png" style="width:100%" onclick="onClick(this)" alt="Braulio">
+						<p class="w3-text w3-medium">Moderator und Veranstalter von Sustainability Today.</p>
+					</div>
+					<div class="w3-col s2">
+						&nbsp;
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-white w3-padding-48 w3-xlarge">
+  <p style="font-size:14px"><a href="impressum.html">Impressum</a> | &nbsp; &nbsp; <a href="mailto:spielinkiel@freenet.de"><img src="../icons/mail.png" height="50px"></a> &nbsp; &nbsp; <a href="https://www.facebook.com/Wandelw%C3%BCrfel-115820006634950/"><img src="../icons/fb.png" height="50px"></a> &nbsp; &nbsp; <a href="https://www.instagram.com/kielwandelwuerfel/"><img src="../icons/insta_icon.png" height="50px"></a> &nbsp; &nbsp; <a href="https://github.com/spielinkiel/spielinkiel.github.io"><img src="https://github.githubassets.com/images/modules/logos_page/Octocat.png" height="50"></a></p>
+  <p class="english">Made with <img src="img/heart.png" width="50"> in Kiel with <a href="https://github.com/spielinkiel/spielinkiel.github.io" title="Fairnetz Kiel" target="_blank" class="w3-hover-text-green"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="80"></a>! - Powered by <a href="https://fairnetz-kiel.de/" title="Fairnetz Kiel" target="_blank" class="w3-hover-text-green"><img src="img/fn_logo.png" width="100"></a></p>
+	<p class="deutsch">Mit <img src="img/heart.png" width="50"> und <a href="https://github.com/spielinkiel/spielinkiel.github.io" title="Fairnetz Kiel" target="_blank" class="w3-hover-text-green"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="80"></a> in Kiel gemacht! - Powered by <a href="https://fairnetz-kiel.de/" title="Fairnetz Kiel" target="_blank" class="w3-hover-text-green"><img src="img/fn_logo.png" width="100"></a></p>
+</footer>
+<script>
+// is this really working?    YES!
+function changeLanguage(lang) {
+	if (lang == 'english') {
+		var deutsche_teile = document.getElementsByClassName("deutsch")
+		for (i = 0; i < deutsche_teile.length; i++) {
+			deutsche_teile[i].style.display = "none";
+		} 
+		var english_parts = document.getElementsByClassName("english")
+		for (i = 0; i < english_parts.length; i++) {
+			english_parts[i].style.display = "inline";
+		} 
+	}
+	if (lang == 'deutsch') {
+		var deutsche_teile = document.getElementsByClassName("deutsch")
+		for (i = 0; i < deutsche_teile.length; i++) {
+			deutsche_teile[i].style.display = "inline";
+		} 
+		var english_parts = document.getElementsByClassName("english")
+		for (i = 0; i < english_parts.length; i++) {
+			english_parts[i].style.display = "none";
+		} 
+	}
+}
+var hashtaglanguage = window.location.hash;
+if (hashtaglanguage == "#en") {
+	document.getElementById("languageEN").click();
+}
+else if (hashtaglanguage == "#de") {
+	document.getElementById("languageDE").click();
+}
+else {
+	document.getElementById("languageDE").click();
+}
+</script>
+
+</body>
+</html>

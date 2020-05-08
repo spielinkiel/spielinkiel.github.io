@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<title>Wandelwürfel</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gotu">
+<style>
+	body, html {height: 100%}
+	body,h1,h2,h3,h4,h5,h6 {font-family: "Gotu", sans-serif}
+	.menu {display: none}
+	.bgimg {
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-color: #000000;=
+	}
+	.fadeIn {
+		animation:opac 6s;
+		@keyframes opac{from{opacity:0} to{opacity:1}};
+	}
+	.ninety {
+		height: 100vh;
+		width: 100vw;
+	}
+</style>
+<body>
+
+
+<div class="w3-top w3-hide-small">
+    <div class="w3-bar w3-large w3-white w3-opacity w3-hover-opacity-off" id="myNavbar" >
+			<div id="leftpart-english" class="english">
+        <a href="index.html#en" class="w3-bar-item w3-button">HOME</a>
+        <a href="games.html#en" class="w3-bar-item w3-button button">GAMES</a>
+        <a href="why.html#en" class="w3-bar-item w3-button button">WHY</a>
+        <a href="kids.html#en" class="w3-bar-item w3-button button">ABOUT US</a>
+        <a href="contact.html#en" class="w3-bar-item w3-button button">CONTACT</a>
+			</div>
+			<div id="leftpart-deutsch" style="display: none" class="deutsch">
+        <a href="index.html#de" class="w3-bar-item w3-button">HOME</a>
+        <a href="games.html#de" class="w3-bar-item w3-button">SPIELE</a>
+        <a href="why.html#de" class="w3-bar-item w3-button button">WARUM</a>
+        <a href="kids.html#de" class="w3-bar-item w3-button button">WER SIND WIR</a>
+        <a href="contact.html#de" class="w3-bar-item w3-button button">KONTAKT</a>
+			</div>
+			<div class="w3-display-topright" style="padding-right: 30px;">
+				<div class="w3-button">
+        	<a href="#de" onclick="changeLanguage('deutsch');" id="languageDE" ><img src="icons/germany-flag-3d-icon-32.png"></a>
+				</div>
+				&nbsp;
+				<div class="w3-button">
+					<a href="#en" onclick="changeLanguage('english');" id="languageEN" ><img src="icons/united-kingdom-flag-3d-icon-32.png"></a>
+				</div>
+			</div>
+    </div>
+</div>	
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+	<img src="img/cover.jpg" class="fadeIn ninety">
+  <div class="w3-display-bottomleft w3-padding">
+    <span class="w3-tag w3-xlarge deutsch">Eine Amazing Kids Produktion..</span>
+		<span class="w3-tag w3-xlarge english">An Amazing Kids Production..</span>
+  </div>
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white w3-hide-small deutsch" id="title-de" style="font-size:100px; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Wandelwürfel<br><small>Lass uns spielen!</small></span>
+		<span class="w3-text-white w3-hide-small english" id="title-en" style="font-size:100px; display: none; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Wandelwürfel<br><small>Let's play!</small></span>
+    <br>
+		<p class="deutsch"><a href="games.html" class="w3-button w3-xxlarge w3-black">
+			Wo sind die Spiele denn?</a></p>
+		<p class="english"><a href="games.html" class="w3-button w3-xxlarge w3-black ">
+			Take me to the games!</a></p>
+  </div>
+  <div class="w3-display-bottomright w3-padding">
+    <img src="img/logo_v1.png" style="width:100px" alt="Logo">
+  </div>
+</header>
+
+<!-- VIDEO CONTAINER  -->
+<div class="w3-container w3-padding-64 w3-green w3-large" id="left">
+  <div class="w3-content">
+		<div class="english">
+    <p class="w3-center w3-xxlarge" >Watch the Video and discover about our Game!</p>
+		</div>
+		<div class="deutsch">
+		<h2 class="w3-center w3-xxlarge" >Schau dich unseres Video an <br>und entdeckt unsere Idee!</h2>
+		</div>
+    <div style="text-align:center"><iframe src="https://player.vimeo.com/video/388058504" width="640" height="564" frameborder="0" allow="autoplay; fullscreen" allowfullscreen style="float:middle"></iframe></div>
+  </div>
+</div>
+  
+<!-- First Container, LEFT -->
+<div class="w3-container w3-padding-64 w3-light-green w3-xlarge" id="left">
+  <div class="w3-content">
+		<span class="english">
+    <p class="w3-center w3-xxlarge"><b>Why always being richer has to be synonim of success?</b></p>
+		</span>
+		<div class="deutsch">
+		<h2 class="w3-center w3-xxlarge"><b>Warum immer reicher zu sein, <br>muss gleichbedeutend mit Erfolg sein?</b></h2>
+    </div>
+		<div class="w3-row-padding">
+			&nbsp;
+		</div>
+		<div class="w3-row-padding">
+      <div class="w3-col s5 english w3-large">
+        <p>We want to develop a new game design, that will make you think again the rule of the game. 
+          Most of the game, and most of life situations, start from pre-defined frameworks and set goal 
+          that most of the time push us to always look for more and take less time to think about the situation
+          and the other options that we have.
+          In the game, as in the life, if you do, buy, produce more it is always seen as a positive thing.
+          We don't fully agree with this idea, so we propose a shift in the paradigm. </p>
+      </div>
+			<div class="w3-col s5 deutsch w3-large">
+        <p>Wir wollen ein neues Spieldesign entwickeln, das Sie dazu bringt, die Spielregel neu zu überdenken. 
+          Der Großteil des Spiels und die meisten Lebenssituationen gehen von vordefinierten Rahmenbedingungen aus und setzen sich ein Ziel 
+          die uns meistens dazu drängen, immer nach mehr zu suchen und uns weniger Zeit zum Nachdenken über die Situation zu nehmen
+          und die anderen Optionen, die wir haben.
+          Im Spiel, wie im Leben, wird es immer als etwas Positives gesehen, wenn man mehr tut, kauft, produziert.
+          Wir sind mit dieser Idee nicht ganz einverstanden, deshalb schlagen wir einen Paradigmenwechsel vor. </p>
+      </div>
+      <div class="w3-col s7">
+          <img src="img/monopoly.png" style="width:80%; float: right" >
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Second Container, RIGHT -->
+<div class="w3-container w3-padding-64 w3-lime w3-xlarge" id="left">
+  <div class="w3-content">
+    <h2 class="w3-center w3-xxlarge" style="margin-bottom:64px">Should we consider richer who has more money?</h2>
+    <div class="w3-row-padding">
+      <div class="w3-col s7">
+				<div class="w3-row"><img src="img/thankstree.png" style="width:80%; float: left; display: block;"></div>
+				<p class="english w3-small"> Source: <a href="http://www.lunarbaboon.com/comics/breathe.html">http://www.lunarbaboon.com/comics/breathe.html</a> <br>
+            Check out more from <a href="http://www.lunarbaboon.com/">lunarbaboon</a>, they are great comics! </p>
+				<p class="deutsch w3-small"> Quelle: <a href="http://www.lunarbaboon.com/comics/breathe.html">http://www.lunarbaboon.com/comics/breathe.html</a> <br>
+            Schauen Sie sich mehr von <a href="http://www.lunarbaboon.com/">lunarbaboon</a> an, es sind großartige Comics!</p>
+      </div>
+      <div class="w3-col s5 english w3-large">
+        <p>Another aspect that we want to take into consideration, is that trees are important for the environment.
+        What they "produce", oxygen, is the most valuable thing we have, without which we cannot survive!
+        Isn't this better than just money?
+        Shouldn't we measure richness in trees?</p>
+      </div>
+			<div class="w3-col s5 deutsch w3-large">
+        <p>Ein weiterer Aspekt, den wir berücksichtigen wollen, ist, dass Bäume für die Umwelt wichtig sind.
+        Was sie "produzieren", nämlich Sauerstoff, ist das Wertvollste, was wir haben, ohne das wir nicht überleben können!
+        Ist das nicht besser als nur Geld?
+        Sollten wir nicht den Reichtum an Bäumen messen?</p>
+      </div>
+    </div>
+  </div>
+</div>
+  
+    
+
+<!-- Image of location/map -->
+<img src="img/spiel.jpg" class="w3-image" style="width:100%;">
+  
+<!-- Footer -->
+<footer class="w3-center w3-white w3-padding-48 w3-xlarge">
+  <p style="font-size:14px"><a href="impressum.html">Impressum</a> | &nbsp; &nbsp; <a href="mailto:spielinkiel@freenet.de"><img src="../icons/mail.png" height="50px"></a> &nbsp; &nbsp; <a href="https://www.facebook.com/Wandelw%C3%BCrfel-115820006634950/"><img src="../icons/fb.png" height="50px"></a> &nbsp; &nbsp; <a href="https://www.instagram.com/kielwandelwuerfel/"><img src="../icons/insta_icon.png" height="50px"></a> &nbsp; &nbsp; <a href="https://github.com/spielinkiel/spielinkiel.github.io"><img src="https://github.githubassets.com/images/modules/logos_page/Octocat.png" height="50"></a></p>
+  <p class="english">Made with <img src="img/heart.png" width="50"> in Kiel with <a href="https://github.com/spielinkiel/spielinkiel.github.io" title="Fairnetz Kiel" target="_blank" class="w3-hover-text-green"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="80"></a>! - Powered by <a href="https://fairnetz-kiel.de/" title="Fairnetz Kiel" target="_blank" class="w3-hover-text-green"><img src="img/fn_logo.png" width="100"></a></p>
+	<p class="deutsch">Mit <img src="img/heart.png" width="50"> und <a href="https://github.com/spielinkiel/spielinkiel.github.io" title="Fairnetz Kiel" target="_blank" class="w3-hover-text-green"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="80"></a> in Kiel gemacht! - Powered by <a href="https://fairnetz-kiel.de/" title="Fairnetz Kiel" target="_blank" class="w3-hover-text-green"><img src="img/fn_logo.png" width="100"></a></p>
+</footer>
+
+<script>
+// is this really working?    YES!
+function changeLanguage(lang) {
+	if (lang == 'english') {
+		var deutsche_teile = document.getElementsByClassName("deutsch")
+		for (i = 0; i < deutsche_teile.length; i++) {
+			deutsche_teile[i].style.display = "none";
+		} 
+		var english_parts = document.getElementsByClassName("english")
+		for (i = 0; i < english_parts.length; i++) {
+			english_parts[i].style.display = "inline";
+		} 
+	}
+	if (lang == 'deutsch') {
+		var deutsche_teile = document.getElementsByClassName("deutsch")
+		for (i = 0; i < deutsche_teile.length; i++) {
+			deutsche_teile[i].style.display = "inline";
+		} 
+		var english_parts = document.getElementsByClassName("english")
+		for (i = 0; i < english_parts.length; i++) {
+			english_parts[i].style.display = "none";
+		} 
+	}
+}
+var hashtaglanguage = window.location.hash;
+if (hashtaglanguage == "#en") {
+	document.getElementById("languageEN").click();
+}
+else if (hashtaglanguage == "#de") {
+	document.getElementById("languageDE").click();
+}
+else {
+	document.getElementById("languageDE").click();
+}
+</script>
+
+</body>
+</html>

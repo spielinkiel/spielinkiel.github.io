@@ -1,78 +1,77 @@
 <!DOCTYPE html>
 <html>
-<title>Wandelwürfel</title>
+<title>Why Games?</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/s.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gotu">
-<link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="icon" href="img/logo_v1.png">
+<style>
+body, html {height: 100%}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Gotu", sans-serif}
+.menu {display: none}
+.bgimg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("https://raw.githubusercontent.com/kalou91/kalou91.github.io/master/spiel2.jpg");
+  min-height: 90%;
+}
+.fadeIn {
+	animation:opac 1.8s;
+	@keyframes opac{from{opacity:0} to{opacity:1}};
+}
+</style>
 <body>
 
-	<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-		<a class="navbar-brand" href="index.html"><img src="img/logo_v1.png" height="30rem;"></a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-
-		<div class="collapse navbar-collapse" id="navbarsExampleDefault">
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item">
-					<div class="deutsch"><a class="nav-link" href="index.html#de">Home </a></div>
-					<div class="english"><a class="nav-link" href="index.html#en">Home </a></div>
-				</li>
-				<li class="nav-item">
-					<div class="deutsch"><a class="nav-link" href="games.html#de">Spiele</a></div>
-					<div class="english"><a class="nav-link" href="games.html#en">Games</a></div>
-				</li>
-				<li class="nav-item">
-					<div class="deutsch"><a class="nav-link active" href="why.html#de">Warum</a></div>
-					<div class="english"><a class="nav-link active" href="why.html#en">Why</a></div>
-				</li>
-				<li class="nav-item">
-					<div class="deutsch"><a class="nav-link" href="kids.html#de">Wer sind wir</a></div>
-					<div class="english"><a class="nav-link" href="kids.html#en">About Us</a></div>
-				</li>
-				<li class="nav-item active">
-					<div class="deutsch"><a class="nav-link" href="contact.html">Kontakt</a></div>
-					<div class="english"><a class="nav-link" href="contact.html">Contact</a></div>
-				</li>
-			</ul>
-				<div class="nav-item dropdown navbar-nav padr">
-					<a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Language <i class="fa fa-language" aria-hidden="true"></i></a>
-					<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown02">
-						<a class="dropdown-item" href="#de" id="languageDE" onclick="changeLanguage('deutsch');"><img src="icons/germany-flag-3d-icon-32.png"> Deutsch</a>
-						<a class="dropdown-item" href="#en" id="languageEN" onclick="changeLanguage('english');"><img src="icons/united-kingdom-flag-3d-icon-32.png"> English</a>
-					</div>
+<!-- Navbar (sit on top) -->
+<div class="w3-top w3-hide-small">
+    <div class="w3-bar w3-large w3-white w3-opacity w3-hover-opacity-off" id="myNavbar" >
+			<div id="leftpart-english" class="english">
+        <a href="index.html#en" class="w3-bar-item w3-button">HOME</a>
+        <a href="games.html#en" class="w3-bar-item w3-button button">GAMES</a>
+        <a href="why.html#en" class="w3-bar-item w3-button button">WHY</a>
+        <a href="kids.html#en" class="w3-bar-item w3-button button">ABOUT US</a>
+        <a href="contact.html#en" class="w3-bar-item w3-button button">CONTACT</a>
+			</div>
+			<div id="leftpart-deutsch" style="display: none" class="deutsch">
+        <a href="index.html#de" class="w3-bar-item w3-button">HOME</a>
+        <a href="games.html#de" class="w3-bar-item w3-button">SPIELE</a>
+        <a href="why.html#de" class="w3-bar-item w3-button button">WARUM</a>
+        <a href="kids.html#de" class="w3-bar-item w3-button button">WER SIND WIR</a>
+        <a href="contact.html#de" class="w3-bar-item w3-button button">KONTAKT</a>
+			</div>
+			<div class="w3-display-topright" style="padding-right: 30px;">
+				<div class="w3-button">
+        	<a href="#de" onclick="changeLanguage('deutsch');" id="languageDE" ><img src="icons/germany-flag-3d-icon-32.png"></a>
 				</div>
-		</div>
-	</nav>
-	
-	<main role="main">
-	
-		<!-- Main jumbotron for a primary marketing message or call to action -->
-		<div class="jumbotron">
-		
-			<!-- ENGLISH -->
-			<div class="english w3-animate-right">
-				<p class="larger">Why are we doing this?</p>
-				<p class="">Why are we making games? What brought us to put our effort into this project instead of just going to 
-				a normal job, get our money and live happily ever after? 
-				You can read about our motivation here, either the full explanation, or if you really cannot read more than 140 characters :( , the compact form on the right. 
-				<br>
-				Enjoy!</p>
+				&nbsp;
+				<div class="w3-button">
+					<a href="#en" onclick="changeLanguage('english');" id="languageEN" ><img src="icons/united-kingdom-flag-3d-icon-32.png"></a>
+				</div>
+			</div>
+    </div>
+</div>	
 
-				<div class="w3-row w3-center w3-border w3-border-dark-grey w3-light-gray w3-round ww-black">
+<div class="w3-container w3-green w3-padding-64 w3-xlarge" id="explanation">
+  <div class="w3-padding">
+  	<div class="fadeIn">
+			<div class="english w3-animate-right">
+				<h1 class="w3-center w3-jumbo" style="margin-bottom:64px">Why are we doing this?</h1>
+				<small>Why are we making games? What brought us to put our effort into this project instead of just going to 
+				a normal job, get our money and live happily ever after? 
+				You can read about our motivation here, either the full explanation, or if you really cannot read more than 140 characters :( , the compact form on the right. </small>
+				<br>
+				Enjoy!
+
+				<div class="w3-row w3-center w3-border w3-border-dark-grey w3-light-green w3-round">
 					<a href="javascript:void(0)" onclick="openMenu(event, 'FULL');" id="myLink">
-						<div class="w3-col s6 tablink w3-padding-large w3-hover-grey">Full Explanation</div>
+						<div class="w3-col s6 tablink w3-padding-large w3-hover-dark-grey">Full Explanation</div>
 					</a>
 					<a href="javascript:void(0)" onclick="openMenu(event, 'TLDR');">
-						<div class="w3-col s6 tablink w3-padding-large w3-hover-grey">In a Nutshell</div>
+						<div class="w3-col s6 tablink w3-padding-large w3-hover-dark-grey">In a Nutshell</div>
 					</a>
 				</div>
 
-				<div id="FULL" class="w3-container menu w3-padding-32 w3-white w3-round">
+				<div id="FULL" class="w3-container menu w3-padding-32 w3-white w3-round"  style="font-size:20px">
 					<p> We are unhappy with how stuff are done in our society, this is clear. But exactly why and how? 
 						These are questions that we are trying to address every day, if not more often.
 						Even though we do not have a clear answer, we are starting to get to see some patterns.
@@ -81,7 +80,7 @@
 						So, if (very optimistic if) we can try to do something, is to change the way people see the everyday task
 						and how they plan their projects. </p>
 					<br>  
-					<p class="ww-disclaimer" style="text-align:left"><strong>DISCLAIMER:</strong><br>
+					<p class="w3-tag w3-round w3-blue" style="text-align:left"><strong>DISCLAIMER:</strong><br>
 						We are aware that games are just a small part of our education, and there would be many other things 
 						that we could spend our time on, instead. But everybody has their own passion, and we try to combine
 						what we like with what we should do, so we opted for this project this time. 
@@ -93,7 +92,7 @@
 						PS: She (Jane) has a lot of <a href="https://www.ted.com/speakers/jane_mcgonigal">videos</a> about that!
 					</p>
 					<br>
-					<p class="medlarge">
+					<p class="w3-text w3-xlarge">
 						<b>So, we took a look at the top board games that are at the moment out there. What did we find? </b>
 					</p>
 					<p class="w3-center w3-round w3-medium"><img src="img/topgames.png" style="width:60%"><br>This was at the beginning of 2020. of course it will change, but the themes will most likely remain similar</p>
@@ -116,13 +115,13 @@
 						A game that probably in these times (March 2020) fits very good our actual situation, where worldwide collaboration is strongly requested.
 						<br>
 					</p>
-					<p class="medlarge">
+					<p class="w3-text w3-xlarge">
 						<b>Wait a moment, What's wrong with those games?</b>
 					</p>
 					<p class="w3-text">
 						In itselft, nothing. But we believe games can and have an impact on how we learn and think, and therefore would like to have at least a broder range of topics addressed in the games.
 					</p>
-						<p class="ww-disclaimer" style="text-align:left"><strong>DISCUSSION: if you like to discuss stuff, read this box. If you do not care, why are you even here? Let alone jokes, if you are informed, you can skip this</strong><br><br>
+						<p class="w3-tag w3-round w3-blue" style="text-align:left"><strong>DISCUSSION: if you like to discuss stuff, read this box. If you do not care, why are you even here? Let alone jokes, if you are informed, you can skip this</strong><br><br>
 							If games actually have an impact and which kind of impact would be a nice discussion, you can read here some articles about general ideas and platforms, as Games4Ed <a href="#games4ed">[1]</a>, Edutopia <a href="#edutopia">[2]</a>, book reviews <a href="#bookreview">[3]</a> or scientific literature on the topic <a href="#lowincome">[4]</a>. Here you can find a whole section of a journal about game and culture <a href="#gamesandculture">[5]</a>.
 							<br>
 							Since we try our best to <a href="https://waitbutwhy.com/2019/09/thinking-ladder.html">think like scientists (if you don't get what we mean here, read the article linked! Yes it's super long, yet super interesting)</a>, we need to also give an overview of the literature against our ideas. For examples, studies found that video games do not improve learning <a href="#noimprove">[6]</a>, source <a href="#studypaywall">[7]</a> or found correlation between video games and adolescent behavioural problems <a href="#teens">[8]</a>.
@@ -140,7 +139,7 @@
 						Now, let's think about <i>why</i> that isn't the case. We guess one of the main causes it's because it would be <i>boring</i>. Do you want to play a game in which you have to redistribute the wealth and build systems to help reduce inequality incomes? Remember, that if you are playing the game you most likely are among the people who have more wealth, so basically you should give up something you have and give it to people you have never seen and will never seen, without any guarantee they will use it in a better way, equality would just mean that they have the same possibility as you. That does not sound very funny, right? If you are already doing that, <a href="https://www.youtube.com/watch?v=5-k4ykdvQtw">hats off to you</a>, and hope that you make many children that will grow up with your ideas.<br>
 						Yet, if you are more like us - let's be honest, lazy people who would like to do something good and in the end survive by trying to get maximum results with minimum effort - we need something more fun and motivating to play with.<br>
 					</p>
-					<p class="medlarge">
+					<p class="w3-text w3-xlarge">
 						<b>So, you that knows everything, why is boring and how can me make it fun?</b>
 					</p>
 					<p class="w3-text">
@@ -152,7 +151,7 @@
 						Of course, this is an exagerated provocation, in real life it's not like this, but we wanted to convey the point in just a few lines - something we are terrible at, as you understood if you read until this line. Basically, to trying to visualize it with an even simpler example, if we want to solve the global warming problem by planting trees (spoiler: <span class="show" onclick="show(globalwarming)">click to see</span><span class="spoiler" id="globalwarming" style="display: none;">it won't work, but nice try, keep it up!</span>), collecting data from a 2010 study, you would need approximately 1,545,000,000,000 trees (calculations <a href="https://earthscience.stackexchange.com/questions/2639/how-many-trees-would-i-have-to-plant-to-solve-global-warming">here</a>, thanks <a href="https://earthscience.stackexchange.com/users/624/dikran-marsupial">Dikran Marsupial</a> and <a href="https://earthscience.stackexchange.com/users/6298/jeopardytempest">JeopardyTempest</a>). Now, if a very generous person plants 1,545,000,000,020 trees (20 more than needed) you could actually cut 20 trees to make a nice campfire and the global warming problem would still be solved. But if that same person would have planted 1,544,999,999,980 trees (20 less than needed), you would have to plant 20 more and you could not cut anyone for you! <br>
 						Here we don't mean that if someone else do something to help you do not have to help anymore, but you get the point. How do we motivate everybody to collaborate?
 					</p>
-					<p class="medlarge">
+					<p class="w3-text w3-xlarge">
 						<b>Still, I don't get it, when it comes the fun part?</b>
 					</p>
 					<p class="w3-text">
@@ -196,27 +195,26 @@
 						You are doing great!</p>
 				</div><br>
 			</div>
-		
-			<!-- DEUTSCH -->
+			
 			<div class="deutsch w3-animate-left">
-				<p class="larger">Warum machen wir das?</p>
-				<p>Warum machen wir Spiele? Was hat uns dazu bewogen, unsere Anstrengungen in dieses Projekt zu stecken, anstatt einfach 
+				<h1 class="w3-center w3-jumbo" style="margin-bottom:64px">Warum machen wir das?</h1>
+				<small>Warum machen wir Spiele? Was hat uns dazu bewogen, unsere Anstrengungen in dieses Projekt zu stecken, anstatt einfach 
 				einen normalen Job, unser Geld bekommen und glücklich leben? 
-				Sie können hier über unsere Motivation lesen, entweder die vollständige Erklärung oder, wenn Sie wirklich nicht mehr als 140 Zeichen lesen können :( , die kompakte Form auf der rechten Seite. 
+				Sie können hier über unsere Motivation lesen, entweder die vollständige Erklärung oder, wenn Sie wirklich nicht mehr als 140 Zeichen lesen können :( , die kompakte Form auf der rechten Seite. </small>
 				<br>
-				Viel Spaß!</p>
+				Viel Spaß!
 				
 
-				<div class="w3-row w3-center w3-border w3-border-dark-grey w3-light-gray w3-round ww-black">
+				<div class="w3-row w3-center w3-border w3-border-dark-grey w3-light-green w3-round">
 					<a href="javascript:void(0)" onclick="openMenu(event, 'FULL-de');" id="myLink-de">
-						<div class="w3-col s6 tablink w3-padding-large w3-hover-grey">Vollständige Erläuterung</div>
+						<div class="w3-col s6 tablink w3-padding-large w3-hover-dark-grey">Vollständige Erläuterung</div>
 					</a>
 					<a href="javascript:void(0)" onclick="openMenu(event, 'TLDR-de');">
-						<div class="w3-col s6 tablink w3-padding-large w3-hover-grey">Kurzgesagt</div>
+						<div class="w3-col s6 tablink w3-padding-large w3-hover-dark-grey">Kurzgesagt</div>
 					</a>
 				</div>
 
-				<div id="FULL-de" class="w3-container menu w3-padding-32 w3-white w3-round">
+				<div id="FULL-de" class="w3-container menu w3-padding-32 w3-white w3-round"  style="font-size:20px">
 					<p> Wir sind unzufrieden damit, wie die Dinge in unserer Gesellschaft gemacht werden, das ist klar. Aber warum und wie genau? 
 						Das sind Fragen, die wir jeden Tag, wenn nicht sogar noch öfter, zu beantworten versuchen.
 						Auch wenn wir keine klare Antwort darauf haben, beginnen wir, einige Muster zu erkennen.
@@ -225,7 +223,7 @@
 						Wenn wir also (sehr optimistisch, wenn) wir versuchen können, etwas zu tun, ist es, die Art und Weise zu ändern, wie die Menschen die alltägliche Aufgabe
 						und wie sie ihre Projekte planen. </p>
 					<br>  
-					<p class="ww-disclaimer" style="text-align:left"><strong>DISCLAIMER:</strong><br>
+					<p class="w3-tag w3-round w3-blue" style="text-align:left"><strong>DISCLAIMER:</strong><br>
 						Wir sind uns bewusst, dass Spiele nur ein kleiner Teil unserer Ausbildung sind, und es gäbe noch viele andere Dinge 
 						für die wir stattdessen unsere Zeit aufwenden könnten. Aber jeder hat seine eigene Leidenschaft, und wir versuchen, die
 						was uns gefällt, mit dem, was wir tun sollten, also haben wir uns diesmal für dieses Projekt entschieden. 
@@ -237,7 +235,7 @@
 						PS: Sie (Jane) hat eine Menge <a href="https://www.ted.com/speakers/jane_mcgonigal">Videos</a> darüber!
 					</p>
 					<br>
-					<p class="medlarge"> <b>Wir haben uns also die besten Brettspiele angeschaut, die es derzeit gibt. Was haben wir gefunden? </b></p>
+					<p class="w3-text w3-xlarge"> <b>Wir haben uns also die besten Brettspiele angeschaut, die es derzeit gibt. Was haben wir gefunden? </b></p>
 					<p class="w3-center w3-round w3-medium"><img src="img/topgames.png" style="width:60%"><br>Das war Anfang des Jahres 2020. Natürlich wird sich das ändern, aber die Themen werden höchstwahrscheinlich ähnlich bleiben</p>
 					<p> Unter den Top 10 geht es bei den meisten Spielen um Abenteuer, um Reisen, um neue Orte zu entdecken, stärker zu werden und den Gegner zu besiegen.
 					Wir sehen Spiele, in denen Sie eine neue Zivilisation erschaffen (ob auf dem Mars, wie <a href="https://boardgamegeek.com/boardgame/167791/terraforming-mars">Terraforming Mars (2016)</a> 
@@ -258,13 +256,13 @@
 						Ein Spiel, das wahrscheinlich in diesen Zeiten (März 2020) sehr gut zu unserer aktuellen Situation passt, in der eine weltweite Zusammenarbeit dringend erforderlich ist.
 						<br>
 					</p>
-					<p class="medlarge">
+					<p class="w3-text w3-xlarge">
 						<b>Warten Sie einen Moment: Was stimmt mit diesen Spielen nicht?</b>
 					</p>
 					<p class="w3-text">
 						An sich nichts. Aber wir glauben, dass Spiele einen Einfluss darauf haben können und haben, wie wir lernen und denken, und möchten daher zumindest eine breitere Palette von Themen in den Spielen behandeln.
 					</p>
-						<p class="ww-disclaimer" style="text-align:left"><strong>DISKUSSION: Wenn Sie gerne diskutieren möchten, lesen Sie diesen Kasten. Wenn es Sie nicht interessiert, warum sind Sie dann überhaupt hier? Geschweige denn Witze, wenn Sie informiert sind, können Sie das hier überspringen.</strong><br><br>
+						<p class="w3-tag w3-round w3-blue" style="text-align:left"><strong>DISKUSSION: Wenn Sie gerne diskutieren möchten, lesen Sie diesen Kasten. Wenn es Sie nicht interessiert, warum sind Sie dann überhaupt hier? Geschweige denn Witze, wenn Sie informiert sind, können Sie das hier überspringen.</strong><br><br>
 							Ob Spiele tatsächlich eine Wirkung haben und welche Art von Wirkung wäre eine nette Diskussion, können Sie hier einige Artikel über allgemeine Ideen und Plattformen lesen, wie Games4Ed <a href="#games4ed">[1]</a>, Edutopia <a href="#edutopia">[2]</a>, Buchbesprechungen <a href="#bookreview">[3]</a> oder wissenschaftliche Literatur zum Thema <a href="#lowincome">[4]</a>. Hier finden Sie einen ganzen Abschnitt einer Zeitschrift über Spiel und Kultur <a href="#gamesandculture">[5]</a>.
 							<br>
 							Da wir unser Bestes versuchen, <a href="https://waitbutwhy.com/2019/09/thinking-ladder.html">wie Wissenschaftler zu denken (wenn Sie nicht verstehen, was wir hier meinen, lesen Sie den verlinkten Artikel! Ja, er ist super lang, aber super interessant)</a>, müssen wir auch einen Überblick über die Literatur gegen unsere Ideen geben. Beispielsweise fanden Studien heraus, dass Videospiele das Lernen nicht verbessern <a href="#noimprove">[6]</a>, Quelle <a href="#studypaywall">[7]</a> oder fanden eine Korrelation zwischen Videospielen und Verhaltensproblemen von Jugendlichen <a href="#teens">[8]</a>.
@@ -282,7 +280,7 @@
 						Denken wir nun über <i>why</i> das ist nicht der Fall. Wir vermuten, eine der Hauptursachen dafür ist, dass es <i>langweilig</i> wäre. Wollen Sie ein Spiel spielen, bei dem Sie den Reichtum umverteilen und Systeme aufbauen müssen, um die Einkommensungleichheit zu verringern? Denken Sie daran, dass Sie, wenn Sie das Spiel spielen, höchstwahrscheinlich zu den Menschen gehören, die mehr Reichtum haben, also im Grunde genommen sollten Sie etwas aufgeben, das Sie haben, und es Menschen geben, die Sie nie gesehen haben und nie sehen werden, ohne jede Garantie, dass sie es besser nutzen werden, Gleichheit würde nur bedeuten, dass sie die gleichen Möglichkeiten haben wie Sie. Das klingt nicht sehr lustig, oder? Wenn Sie das bereits tun, <a href="https://www.youtube.com/watch?v=5-k4ykdvQtw">Hut ab vor Ihnen</a>, und hoffen, dass Sie viele Kinder machen, die mit Ihren Ideen aufwachsen werden.<br>
 						Wenn Sie jedoch mehr wie wir sind - seien wir ehrlich, faule Menschen, die etwas Gutes tun und am Ende überleben wollen, indem sie versuchen, mit minimalem Aufwand maximale Ergebnisse zu erzielen - dann brauchen wir etwas, das mehr Spaß macht und zum Spielen motiviert.
 					</p>
-					<p class="medlarge">
+					<p class="w3-text w3-xlarge">
 						<b>Also, Du, die/der alles weißt, warum ist es langweilig und wie kann es lustig gemacht werden?</b>
 					</p>
 					<p class="w3-text">
@@ -294,7 +292,7 @@
 						Natürlich ist dies eine übertriebene Provokation, im wirklichen Leben ist es nicht so, aber wir wollten den Punkt in nur wenigen Zeilen vermitteln - etwas, worin wir schrecklich sind, wie Sie verstanden haben, wenn Sie bis zu dieser Zeile lesen. Im Grunde genommen, um zu versuchen, es mit einem noch einfacheren Beispiel zu veranschaulichen, wenn wir das Problem der globalen Erwärmung durch das Pflanzen von Bäumen lösen wollen (Spoiler: <span class="show" onclick="show(globalwarming)">click, um zu sehen</span><span class="spoiler" id="globalwarming" style="display: none;">es wird nicht funktionieren, aber netter Versuch, weiter so! </span>), Daten aus einer Studie von 2010 zu sammeln, würden Sie ungefähr 1.545.000.000.000 Bäume benötigen (Berechnungen <a href="https://earthscience. stackexchange.com/questions/2639/how-many-trees-would-i-have-to-plant-to-solve-global-warming">here</a>, danke <a href="https://earthscience.stackexchange.com/users/624/dikran-marsupial">Dikran Marsupial</a> und <a href="https://earthscience.stackexchange.com/users/6298/jeopardytempest">JeopardyTempest</a>). Wenn nun eine sehr großzügige Person 1.545.000.000.020 Bäume pflanzt (20 mehr als nötig), könnte man tatsächlich 20 Bäume fällen, um ein schönes Lagerfeuer zu machen, und das Problem der globalen Erwärmung wäre immer noch gelöst. Aber wenn dieselbe Person 1.544.999.999.999.980 Bäume gepflanzt hätte (20 weniger als nötig), müssten Sie 20 weitere Bäume pflanzen und könnten niemanden für Sie fällen! <br>
 						Damit meinen wir nicht, dass, wenn jemand anderes etwas tut, um Ihnen zu helfen, Sie nicht mehr helfen müssen, aber Sie haben es verstanden. Wie motivieren wir alle zur Zusammenarbeit?
 					</p>
-					<p class="medlarge">
+					<p class="w3-text w3-xlarge">
 						<b>Trotzdem verstehe ich es nicht, wann kommt dann den lustigen Teil?</b>
 					</p>
 					<p class="w3-text">
@@ -339,76 +337,75 @@
 				</div><br>
 			</div>
 			
-		</div> <!-- /container -->
-
-	</main>
-
-	<footer class="container mastfoot mt-auto">
-		<div class="row centered">
-			<div class="col-md-4">
-				<img src="img/ywd.png" width="80rem;" style="float: left; margin-bottom: 1rem;"/> <p class="smaller">Gefördert im yooweedoo Ideenwettbewerb 2020 <br> Unterstützt durch den Europäischen Fonds für regionale Entwicklung (EFRE), den Bund und das Land Schleswig-Holstein</p>
-			</div>
-			<div class="col-md-4">
-				<br>
-				<p class="larger"><i class="fa fa-envelope-o" aria-hidden="true"></i> 
-					<span style="display:inline-block; width: 0.5rem;">
-					</span><i class="fa fa-facebook" aria-hidden="true"></i>
-					<span style="display:inline-block; width: 0rem;"></span>
-					<i class="fa fa-instagram" aria-hidden="true"></i>
-					<span style="display:inline-block; width: 0.55rem;"></span><i class="fa fa-github" aria-hidden="true"></i></p>
-			</div>
-			<div class="col-md-4">
-				<p class="medium"><br><br><span class="copyleft"></span> Copyleft 2020 - <a href="/impressum.html">Impressum</a></p>
-			</div>
 		</div>
-	</footer>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-white w3-padding-48 w3-xlarge">
+   <p style="font-size:14px"><a href="impressum.html">Impressum</a> | &nbsp; &nbsp; <a href="mailto:spielinkiel@freenet.de"><img src="../icons/mail.png" height="50px"></a> &nbsp; &nbsp; <a href="https://www.facebook.com/Wandelw%C3%BCrfel-115820006634950/"><img src="../icons/fb.png" height="50px"></a> &nbsp; &nbsp; <a href="https://www.instagram.com/kielwandelwuerfel/"><img src="../icons/insta_icon.png" height="50px"></a> &nbsp; &nbsp; <a href="https://github.com/spielinkiel/spielinkiel.github.io"><img src="https://github.githubassets.com/images/modules/logos_page/Octocat.png" height="50"></a></p>
+  <p class="english">Made with <img src="img/heart.png" width="50"> in Kiel with <a href="https://github.com/spielinkiel/spielinkiel.github.io" title="Fairnetz Kiel" target="_blank" class="w3-hover-text-green"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="80"></a>! - Powered by <a href="https://fairnetz-kiel.de/" title="Fairnetz Kiel" target="_blank" class="w3-hover-text-green"><img src="img/fn_logo.png" width="100"></a></p>
+	<p class="deutsch">Mit <img src="img/heart.png" width="50"> und <a href="https://github.com/spielinkiel/spielinkiel.github.io" title="Fairnetz Kiel" target="_blank" class="w3-hover-text-green"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="80"></a> in Kiel gemacht! - Powered by <a href="https://fairnetz-kiel.de/" title="Fairnetz Kiel" target="_blank" class="w3-hover-text-green"><img src="img/fn_logo.png" width="100"></a></p>
+</footer>
 	
-	
-	<script src="js/ww.js">
-	</script>
-	<script src="js/jquery.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-	<script src="js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-	<script
-    src="https://code.jquery.com/jquery-3.3.1.js"
-    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-    crossorigin="anonymous">
+<script>
+// is this really working?    YES!
+function changeLanguage(lang) {
+	if (lang == 'english') {
+		var deutsche_teile = document.getElementsByClassName("deutsch")
+		for (i = 0; i < deutsche_teile.length; i++) {
+			deutsche_teile[i].style.display = "none";
+		} 
+		var english_parts = document.getElementsByClassName("english")
+		for (i = 0; i < english_parts.length; i++) {
+			english_parts[i].style.display = "inline";
+		} 
+		document.getElementById("myLink").click();
+	}
+	if (lang == 'deutsch') {
+		var deutsche_teile = document.getElementsByClassName("deutsch")
+		for (i = 0; i < deutsche_teile.length; i++) {
+			deutsche_teile[i].style.display = "inline";
+		} 
+		var english_parts = document.getElementsByClassName("english")
+		for (i = 0; i < english_parts.length; i++) {
+			english_parts[i].style.display = "none";
+		} 
+		document.getElementById("myLink-de").click();
+	}
+}
+var hashtaglanguage = window.location.hash;
+if (hashtaglanguage == "#en") {
+	document.getElementById("languageEN").click();
+	document.getElementById("myLink").click();
+}
+else if (hashtaglanguage == "#de") {
+	document.getElementById("languageDE").click();
+	document.getElementById("myLink-de").click();
+}
+else {
+	document.getElementById("languageDE").click();
+	document.getElementById("myLink-de").click();
+	document.getElementById("myLink").click();
+}
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-black", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-black";
+}
+document.getElementById("myLink").click();	
+document.getElementById("myLink-de").click();	
 </script>
-	<script> 
-		// SET THE LANGUAGE
-		$(document).ready(function() {
-			var hashtaglanguage = window.location.hash;
-			if (hashtaglanguage == "#en") {
-				changeLanguage('english');
-				//openMenu(event, 'FULL');
-			}
-			else if (hashtaglanguage == "#de") {
-				changeLanguage('deutsch');
-				//openMenu(event, 'FULL-de');
-			}
-			else {
-				changeLanguage('deutsch');
-				//openMenu(event, 'FULL-de');
-			}
-		});
-		// Tabbed Menu
-		function openMenu(evt, menuName) {
-			var i, x, tablinks;
-			x = document.getElementsByClassName("menu");
-			for (i = 0; i < x.length; i++) {
-				 x[i].style.display = "none";
-			}
-			tablinks = document.getElementsByClassName("tablink");
-			for (i = 0; i < x.length; i++) {
-				 tablinks[i].className = tablinks[i].className.replace(" darkslategray", "");
-			}
-			document.getElementById(menuName).style.display = "block";
-			evt.currentTarget.firstElementChild.className += " darkslategray";
-		}
-		document.getElementById("myLink").click();	
-		document.getElementById("myLink-de").click();	
-		
-	</script>
-	
+
 </body>
 </html>
+

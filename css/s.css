@@ -113,7 +113,15 @@ body {
 .ww-bottom-margin {
 	margin-bottom: 2rem;
 }
-
+.ready {
+	padding: 1rem;
+}
+.notready {
+	padding: 1rem;	
+}
+.spaceabove {
+	padding-top: 1rem;
+}
 /* w3s css */
 /* W3.CSS 4.13 June 2019 by Jan Egil and Borge Refsnes */
 html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
